@@ -1,0 +1,151 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "appointment": "Book Appointment",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "website": "Website",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "getQuote": "Get Quote",
+    "contactUs": "Contact Us",
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "next": "Next",
+    "previous": "Previous",
+    "confirm": "Confirm"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Our Services",
+    "contact": "Contact",
+    "appointment": "Book Appointment",
+    "financialServices": "Financial Consulting",
+    "accountingServices": "Accounting Services",
+    "notaryServices": "Notary & Translation",
+    "insuranceServices": "Insurance Services"
+  },
+  "hero": {
+    "title": "BEKA SOLUTIONS",
+    "subtitle": "Boston Consulting Hub",
+    "description": "Comprehensive consulting services for your business success. We are here with our expert team in financial consulting, accounting, notary and insurance services.",
+    "quickContact": "Quick Contact",
+    "freeConsultation": "Free Consultation",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "addressLabel": "Address"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "You can contact us for our services",
+    "seeDetails": "See Details",
+    "whyChooseUs": "Why Choose Beka Solutions?",
+    "whyChooseUsDesc": "We contribute to the success of businesses in the Boston area by providing reliable consulting services.",
+    "features": {
+      "0": "Professional service with expert staff",
+      "1": "Support in Turkish and English languages",
+      "2": "Reliable partner in Boston area",
+      "3": "24/7 customer support"
+    },
+    "stats": {
+      "happyClients": "Happy Clients",
+      "experience": "Years Experience",
+      "support": "Support",
+      "satisfaction": "Satisfaction"
+    },
+    "cta": {
+      "title": "Ready to Grow Your Business?",
+      "description": "Meet with our expert team and discover the most suitable solutions for your business."
+    },
+    "financial": {
+      "title": "Financial Consulting",
+      "description": "Expert consulting for SBA Loans and Grants-Subsidies",
+      "features": ["SBA LOANS", "GRANTS-SUBSIDIES"]
+    },
+    "accounting": {
+      "title": "Accounting Services",
+      "description": "Personal Tax Return, Business Tax Return and general accounting services",
+      "features": ["Personal Tax Return", "Business Tax Return"]
+    },
+    "notary": {
+      "title": "Notary & Translation",
+      "description": "Official document processing and professional translation services",
+      "features": ["Notary Services", "Translation Services"]
+    },
+    "insurance": {
+      "title": "Insurance Services",
+      "description": "Company establishment and Worker Comps & Business Insurance",
+      "features": ["Company Formation", "Worker Comps & Business Insurance"]
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Who we are",
+    "description": "As Beka Solutions Boston Consulting Hub, we contribute to the success of businesses in the Boston area by providing comprehensive consulting services.",
+    "whoWeAre": "Who We Are",
+    "ourValues": "Our Values",
+    "ourTeam": "Our Team",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "missionText": "To help businesses achieve sustainable growth and success by optimizing their financial and operational processes. To be a reliable business partner by providing value-added solutions to our customers.",
+    "visionText": "To become a leader in the consulting sector in the Boston area and to be the first choice of our customers. To make a difference with our innovative approaches and continuously improving service quality."
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Contact us for your questions. Our expert team is here to help you as soon as possible.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "required": "Required"
+    },
+    "info": {
+      "workingHours": "Working Hours",
+      "emergency": "Emergency Contact",
+      "location": "Office Location"
+    }
+  },
+  "appointment": {
+    "title": "Book Appointment",
+    "subtitle": "Book an appointment to meet with our expert team. Online payment options are available.",
+    "steps": {
+      "service": "Service Selection",
+      "datetime": "Date & Time",
+      "info": "Information",
+      "payment": "Payment",
+      "confirmation": "Confirmation"
+    },
+    "selectService": "Select Service",
+    "selectDateTime": "Select Date and Time",
+    "personalInfo": "Personal Information",
+    "paymentMethod": "Payment Method",
+    "appointmentSummary": "Appointment Summary",
+    "success": "Appointment Created!",
+    "successMessage": "Appointment details have been sent to your email address. We expect you 15 minutes before your appointment time."
+  },
+  "footer": {
+    "companyInfo": "Professional consulting services to contribute to the growth of your business.",
+    "services": "Our Services",
+    "contactInfo": "Contact Information",
+    "workingHours": "Working Hours",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "payment": {
+    "creditCard": "Pay with Credit Card",
+    "paypal": "PayPal",
+    "bankTransfer": "Bank Transfer",
+    "cash": "Cash Payment",
+    "secure": "Secure payment processing with SSL encryption"
+  }
+}

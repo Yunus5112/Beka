@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { LanguageProvider } from './contexts/LanguageContext';
 import Layout from './components/Layout/Layout';
 
 // Pages
@@ -43,8 +44,9 @@ const Terms = () => (
 
 const App = () => {
   return (
-    <Router>
-      <Layout>
+    <LanguageProvider>
+      <Router>
+        <Layout>
         <Routes>
           {/* Main Pages */}
           <Route path="/" element={<Home />} />
@@ -79,8 +81,9 @@ const App = () => {
             </div>
           } />
         </Routes>
-      </Layout>
-    </Router>
+        </Layout>
+      </Router>
+    </LanguageProvider>
   );
 };
 

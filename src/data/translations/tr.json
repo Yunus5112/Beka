@@ -1,0 +1,151 @@
+{
+  "common": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetlerimiz",
+    "contact": "İletişim",
+    "appointment": "Randevu Al",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "address": "Adres",
+    "website": "Web Sitesi",
+    "readMore": "Devamını Oku",
+    "learnMore": "Daha Fazla Bilgi",
+    "getQuote": "Fiyat Al",
+    "contactUs": "Bize Ulaşın",
+    "loading": "Yükleniyor...",
+    "submit": "Gönder",
+    "cancel": "İptal",
+    "next": "İleri",
+    "previous": "Geri",
+    "confirm": "Onayla"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetlerimiz",
+    "contact": "İletişim",
+    "appointment": "Randevu Al",
+    "financialServices": "Finansal Danışmanlık",
+    "accountingServices": "Muhasebe Servisi",
+    "notaryServices": "Noterlik ve Tercümanlık",
+    "insuranceServices": "Sigorta Hizmetleri"
+  },
+  "hero": {
+    "title": "BEKA SOLUTIONS",
+    "subtitle": "Boston Consulting Hub",
+    "description": "İşletmenizin başarısı için kapsamlı danışmanlık hizmetleri. Finansal danışmanlık, muhasebe, noterlik ve sigorta alanlarında uzman ekibimizle yanınızdayız.",
+    "quickContact": "Hızlı İletişim",
+    "freeConsultation": "Ücretsiz Danışmanlık Al",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-posta",
+    "addressLabel": "Adres"
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Servislerimiz için bizimle iletişime geçebilirsiniz",
+    "seeDetails": "Detayları Gör",
+    "whyChooseUs": "Neden Beka Solutions?",
+    "whyChooseUsDesc": "Boston bölgesinde güvenilir danışmanlık hizmetleri sunarak işletmenizin büyümesine katkıda bulunuyoruz.",
+    "features": {
+      "0": "Uzman kadro ile profesyonel hizmet",
+      "1": "Türkçe ve İngilizce dillerinde destek", 
+      "2": "Boston bölgesinde güvenilir partner",
+      "3": "7/24 müşteri desteği"
+    },
+    "stats": {
+      "happyClients": "Memnun Müşteri",
+      "experience": "Yıl Deneyim", 
+      "support": "Destek",
+      "satisfaction": "Memnuniyet"
+    },
+    "cta": {
+      "title": "İşletmenizi Büyütmek İçin Hazır mısınız?",
+      "description": "Uzman ekibimizle tanışın ve işletmeniz için en uygun çözümleri keşfedin."
+    },
+    "financial": {
+      "title": "Finansal Danışmanlık",
+      "description": "SBA Loans ve Grants-Hibeler konularında uzman danışmanlık",
+      "features": ["SBA LOANS", "GRANTS-HIBELER"]
+    },
+    "accounting": {
+      "title": "Muhasebe Servisi",
+      "description": "Personal Tax Return, Business Tax Return ve genel muhasebe hizmetleri",
+      "features": ["Personal Tax Return - Kişisel Vergi Beyannamesi", "Business Tax Return - Şirket Vergi Beyannamesi"]
+    },
+    "notary": {
+      "title": "Noterlik ve Tercümanlık",
+      "description": "Resmi evrak işlemleri ve profesyonel tercüme hizmetleri",
+      "features": ["Noterlik işlemleri", "Tercüme işlemleri - Translation"]
+    },
+    "insurance": {
+      "title": "Sigorta Hizmetleri",
+      "description": "Şirket kurulumu ve Worker Comps & Business Sigortası",
+      "features": ["Şirket Kurulumu", "Worker Comps & Business Sigortası"]
+    }
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "subtitle": "Kim Olduğumuz",
+    "description": "Beka Solutions Boston Consulting Hub olarak, Boston bölgesinde işletmelere kapsamlı danışmanlık hizmetleri sunarak onların başarısına katkıda bulunuyoruz.",
+    "whoWeAre": "Kim Olduğumuz",
+    "ourValues": "Değerlerimiz",
+    "ourTeam": "Ekibimiz",
+    "mission": "Misyonumuz",
+    "vision": "Vizyonumuz",
+    "missionText": "İşletmelerin finansal ve operasyonel süreçlerini optimize ederek, sürdürülebilir büyüme ve başarı elde etmelerine yardımcı olmak. Müşterilerimize değer katacak çözümler sunarak, onların güvenilir iş ortağı olmak.",
+    "visionText": "Boston bölgesinde danışmanlık sektöründe lider konuma gelmek ve müşterilerimizin ilk tercihi olmak. Yenilikçi yaklaşımlarımızla sektöre öncülük etmek ve sürekli gelişen hizmet kalitemizle fark yaratmak."
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "subtitle": "Sorularınız için bizimle iletişime geçin. Uzman ekibimiz size en kısa sürede yardımcı olmak için burada.",
+    "form": {
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "subject": "Konu",
+      "message": "Mesaj",
+      "send": "Mesaj Gönder",
+      "required": "Zorunlu"
+    },
+    "info": {
+      "workingHours": "Çalışma Saatleri",
+      "emergency": "Acil Durum İletişim",
+      "location": "Ofis Konumu"
+    }
+  },
+  "appointment": {
+    "title": "Randevu Al",
+    "subtitle": "Uzman ekibimizle görüşmek için randevu alın. Online ödeme seçenekleri mevcuttur.",
+    "steps": {
+      "service": "Hizmet Seçimi",
+      "datetime": "Tarih & Saat",
+      "info": "Bilgiler",
+      "payment": "Ödeme",
+      "confirmation": "Onay"
+    },
+    "selectService": "Hizmet Seçin",
+    "selectDateTime": "Tarih ve Saat Seçin",
+    "personalInfo": "Kişisel Bilgiler",
+    "paymentMethod": "Ödeme Yöntemi",
+    "appointmentSummary": "Randevu Özeti",
+    "success": "Randevunuz Oluşturuldu!",
+    "successMessage": "Randevu detayları e-posta adresinize gönderildi. Randevu saatinden 15 dakika önce bekliyoruz."
+  },
+  "footer": {
+    "companyInfo": "Profesyonel danışmanlık hizmetleri ile işletmenizin büyümesine katkıda bulunuyoruz.",
+    "services": "Hizmetlerimiz",
+    "contactInfo": "İletişim Bilgileri",
+    "workingHours": "Çalışma Saatleri",
+    "rights": "Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları"
+  },
+  "payment": {
+    "creditCard": "Kredi Kartı ile Ödeme",
+    "paypal": "PayPal",
+    "bankTransfer": "Banka Havalesi",
+    "cash": "Nakit Ödeme",
+    "secure": "Güvenli ödeme işlemi için SSL şifreleme kullanılmaktadır"
+  }
+}

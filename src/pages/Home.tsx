@@ -1,39 +1,42 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Users, Award, TrendingUp, Calendar } from 'lucide-react';
+import { useTranslation } from '../contexts/LanguageContext';
 
 const Home = () => {
+  const { t } = useTranslation();
+  
   const services = [
     {
-      title: 'Finansal Danışmanlık',
-      description: 'SBA Loans ve Grants-Hibeler konularında uzman danışmanlık',
+      title: t('services.financial.title'),
+      description: t('services.financial.description'),
       icon: TrendingUp,
       link: '/services/financial'
     },
     {
-      title: 'Muhasebe Servisi',
-      description: 'Personal Tax Return, Business Tax Return ve genel muhasebe hizmetleri',
+      title: t('services.accounting.title'),
+      description: t('services.accounting.description'),
       icon: Award,
       link: '/services/accounting'
     },
     {
-      title: 'Noterlik ve Tercümanlık',
-      description: 'Noterlik işlemleri ve profesyonel tercüme hizmetleri',
+      title: t('services.notary.title'),
+      description: t('services.notary.description'),
       icon: CheckCircle,
       link: '/services/notary'
     },
     {
-      title: 'Sigorta Hizmetleri',
-      description: 'Şirket kurulumu, Sigorta ve Worker Comps & Business Sigortası',
+      title: t('services.insurance.title'),
+      description: t('services.insurance.description'),
       icon: Users,
       link: '/services/insurance'
     }
   ];
 
   const features = [
-    'Uzman kadro ile profesyonel hizmet',
-    'Türkçe ve İngilizce dillerinde destek',
-    'Boston bölgesinde güvenilir partner',
-    '7/24 müşteri desteği'
+    t('services.features.0') || 'Uzman kadro ile profesyonel hizmet',
+    t('services.features.1') || 'Türkçe ve İngilizce dillerinde destek',
+    t('services.features.2') || 'Boston bölgesinde güvenilir partner',
+    t('services.features.3') || '7/24 müşteri desteği'
   ];
 
   return (
@@ -45,15 +48,13 @@ const Home = () => {
             <div className="space-y-8">
               <div>
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                  BEKA SOLUTIONS
+                  {t('hero.title')}
                 </h1>
                 <h2 className="text-2xl lg:text-3xl font-semibold text-blue-100 mb-4">
-                  Boston Consulting Hub
+                  {t('hero.subtitle')}
                 </h2>
                 <p className="text-xl text-blue-100 leading-relaxed">
-                  İşletmenizin başarısı için kapsamlı danışmanlık hizmetleri. 
-                  Finansal danışmanlık, muhasebe, noterlik ve sigorta alanlarında 
-                  uzman ekibimizle yanınızdayız.
+                  {t('hero.description')}
                 </p>
               </div>
               
@@ -63,13 +64,13 @@ const Home = () => {
                   className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center justify-center space-x-2"
                 >
                   <Calendar className="w-5 h-5" />
-                  <span>Randevu Al</span>
+                  <span>{t('common.appointment')}</span>
                 </Link>
                 <Link
                   to="/services"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center space-x-2"
                 >
-                  <span>Hizmetlerimiz</span>
+                  <span>{t('common.services')}</span>
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
@@ -77,18 +78,18 @@ const Home = () => {
 
             <div className="relative">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-6">
-                <h3 className="text-2xl font-bold text-center">Hızlı İletişim</h3>
+                <h3 className="text-2xl font-bold text-center">{t('hero.quickContact')}</h3>
                 <div className="space-y-4 text-center">
                   <div>
-                    <p className="text-blue-100">Telefon</p>
+                    <p className="text-blue-100">{t('hero.phoneLabel')}</p>
                     <p className="text-xl font-semibold">+1-857-343-3120</p>
                   </div>
                   <div>
-                    <p className="text-blue-100">E-posta</p>
+                    <p className="text-blue-100">{t('hero.emailLabel')}</p>
                     <p className="text-lg">bostonconsultinghub@gmail.com</p>
                   </div>
                   <div>
-                    <p className="text-blue-100">Adres</p>
+                    <p className="text-blue-100">{t('hero.addressLabel')}</p>
                     <p className="text-lg">420 Lincoln Ave Saugus MA 01906</p>
                   </div>
                 </div>
@@ -102,9 +103,9 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Hizmetlerimiz</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('services.title')}</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Servislerimiz için bizimle iletişime geçebilirsiniz
+              {t('services.subtitle')}
             </p>
           </div>
 
@@ -129,7 +130,7 @@ const Home = () => {
                     to={service.link}
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-transform"
                   >
-                    Detayları Gör
+                    {t('services.seeDetails')}
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
@@ -145,11 +146,10 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Neden Beka Solutions?
+                {t('services.whyChooseUs')}
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                Boston bölgesinde güvenilir danışmanlık hizmetleri sunarak 
-                işletmenizin büyümesine katkıda bulunuyoruz.
+                {t('services.whyChooseUsDesc')}
               </p>
               <div className="space-y-4">
                 {features.map((feature, index) => (
@@ -166,19 +166,19 @@ const Home = () => {
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div className="bg-white rounded-lg p-6">
                     <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-                    <div className="text-gray-600">Memnun Müşteri</div>
+                    <div className="text-gray-600">{t('services.stats.happyClients')}</div>
                   </div>
                   <div className="bg-white rounded-lg p-6">
                     <div className="text-3xl font-bold text-green-600 mb-2">5+</div>
-                    <div className="text-gray-600">Yıl Deneyim</div>
+                    <div className="text-gray-600">{t('services.stats.experience')}</div>
                   </div>
                   <div className="bg-white rounded-lg p-6">
                     <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
-                    <div className="text-gray-600">Destek</div>
+                    <div className="text-gray-600">{t('services.stats.support')}</div>
                   </div>
                   <div className="bg-white rounded-lg p-6">
                     <div className="text-3xl font-bold text-green-600 mb-2">100%</div>
-                    <div className="text-gray-600">Memnuniyet</div>
+                    <div className="text-gray-600">{t('services.stats.satisfaction')}</div>
                   </div>
                 </div>
               </div>
@@ -191,10 +191,10 @@ const Home = () => {
       <section className="bg-gradient-to-r from-blue-600 to-green-500 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            İşletmenizi Büyütmek İçin Hazır mısınız?
+            {t('services.cta.title')}
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Uzman ekibimizle tanışın ve işletmeniz için en uygun çözümleri keşfedin.
+            {t('services.cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -202,13 +202,13 @@ const Home = () => {
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center space-x-2"
             >
               <Calendar className="w-5 h-5" />
-              <span>Ücretsiz Danışmanlık Al</span>
+              <span>{t('hero.freeConsultation')}</span>
             </Link>
             <Link
               to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              Bize Ulaşın
+              {t('common.contactUs')}
             </Link>
           </div>
         </div>

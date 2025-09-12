@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Globe, Clock } from 'lucide-react';
+import { useTranslation } from '../../contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -20,32 +22,32 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Profesyonel danışmanlık hizmetleri ile işletmenizin büyümesine katkıda bulunuyoruz.
+              {t('footer.companyInfo')}
             </p>
           </div>
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Hizmetlerimiz</h3>
+            <h3 className="text-lg font-semibold">{t('footer.services')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/services/financial" className="text-gray-300 hover:text-white transition-colors">
-                  Finansal Danışmanlık
+                  {t('navigation.financialServices')}
                 </Link>
               </li>
               <li>
                 <Link to="/services/accounting" className="text-gray-300 hover:text-white transition-colors">
-                  Muhasebe Servisi
+                  {t('navigation.accountingServices')}
                 </Link>
               </li>
               <li>
                 <Link to="/services/notary" className="text-gray-300 hover:text-white transition-colors">
-                  Noterlik ve Tercümanlık
+                  {t('navigation.notaryServices')}
                 </Link>
               </li>
               <li>
                 <Link to="/services/insurance" className="text-gray-300 hover:text-white transition-colors">
-                  Sigorta Hizmetleri
+                  {t('navigation.insuranceServices')}
                 </Link>
               </li>
             </ul>
@@ -53,7 +55,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">İletişim Bilgileri</h3>
+            <h3 className="text-lg font-semibold">{t('footer.contactInfo')}</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
@@ -76,7 +78,7 @@ const Footer = () => {
 
           {/* Working Hours */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Çalışma Saatleri</h3>
+            <h3 className="text-lg font-semibold">{t('footer.workingHours')}</h3>
             <div className="space-y-2">
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-blue-400" />
@@ -100,7 +102,7 @@ const Footer = () => {
               to="/appointment"
               className="inline-block bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-green-600 transition-all"
             >
-              Randevu Al
+              {t('common.appointment')}
             </Link>
           </div>
         </div>
@@ -108,14 +110,14 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {currentYear} Beka Solutions. Tüm hakları saklıdır.
+              © {currentYear} Beka Solutions. {t('footer.rights')}
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Gizlilik Politikası
+                {t('footer.privacy')}
               </Link>
               <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Kullanım Şartları
+                {t('footer.terms')}
               </Link>
             </div>
           </div>

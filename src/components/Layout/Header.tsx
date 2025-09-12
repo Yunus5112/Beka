@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { useTranslation } from '../../contexts/LanguageContext';
+import LanguageSwitcher from '../UI/LanguageSwitcher';
 
 const Header = () => {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
@@ -10,20 +13,20 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   const menuItems = [
-    { name: 'Ana Sayfa', path: '/' },
-    { name: 'Hakkımızda', path: '/about' },
+    { name: t('navigation.home'), path: '/' },
+    { name: t('navigation.about'), path: '/about' },
     { 
-      name: 'Hizmetlerimiz', 
+      name: t('navigation.services'), 
       path: '/services',
       submenu: [
-        { name: 'Finansal Danışmanlık', path: '/services/financial' },
-        { name: 'Muhasebe Servisi', path: '/services/accounting' },
-        { name: 'Noterlik ve Tercümanlık', path: '/services/notary' },
-        { name: 'Sigorta Hizmetleri', path: '/services/insurance' }
+        { name: t('navigation.financialServices'), path: '/services/financial' },
+        { name: t('navigation.accountingServices'), path: '/services/accounting' },
+        { name: t('navigation.notaryServices'), path: '/services/notary' },
+        { name: t('navigation.insuranceServices'), path: '/services/insurance' }
       ]
     },
-    { name: 'İletişim', path: '/contact' },
-    { name: 'Randevu Al', path: '/appointment' }
+    { name: t('navigation.contact'), path: '/contact' },
+    { name: t('navigation.appointment'), path: '/appointment' }
   ];
 
   return (
@@ -80,7 +83,7 @@ const Header = () => {
                       isActive(item.path)
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                    } ${item.name === 'Randevu Al' ? 'bg-gradient-to-r from-blue-600 to-green-500 text-white hover:from-blue-700 hover:to-green-600' : ''}`}
+                    } ${item.name === t('navigation.appointment') ? 'bg-gradient-to-r from-blue-600 to-green-500 text-white hover:from-blue-700 hover:to-green-600' : ''}`}
                   >
                     {item.name}
                   </Link>
@@ -89,13 +92,18 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Language Switcher and Mobile menu button */}
+          <div className="flex items-center space-x-4">
+            <LanguageSwitcher />
+            
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -110,7 +118,7 @@ const Header = () => {
                       isActive(item.path)
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                    } ${item.name === 'Randevu Al' ? 'bg-gradient-to-r from-blue-600 to-green-500 text-white' : ''}`}
+                    } ${item.name === t('navigation.appointment') ? 'bg-gradient-to-r from-blue-600 to-green-500 text-white' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -131,6 +139,11 @@ const Header = () => {
                   )}
                 </div>
               ))}
+              
+              {/* Mobile Language Switcher */}
+              <div className="border-t border-gray-200 pt-4 mt-4">
+                <LanguageSwitcher variant="mobile" />
+              </div>
             </div>
           </div>
         )}
