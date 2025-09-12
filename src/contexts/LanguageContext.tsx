@@ -10,7 +10,7 @@ interface LanguageContextType {
   language: Language;
   translations: Translations;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string) => any;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -53,7 +53,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const currentTranslations = translations[language];
 
   // Translation function with dot notation support
-  const t = (key: string): string => {
+  const t = (key: string): any => {
     try {
       if (!key || !currentTranslations) {
         return key || '';
@@ -70,7 +70,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
         }
       }
       
-      return typeof value === 'string' ? value : key;
+      return value !== undefined ? value : key;
     } catch (error) {
       console.error('Translation error:', error, 'for key:', key);
       return key || '';

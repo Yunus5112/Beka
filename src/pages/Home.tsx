@@ -42,7 +42,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-green-700 text-white py-20">
+      <section className="bg-gradient-to-br from-[#1E272D] via-[#2A363E] to-[#6B7473] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -117,7 +117,7 @@ const Home = () => {
                   key={index}
                   className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow group"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-500 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#1E272D] to-[#6B7473] rounded-lg flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -162,7 +162,7 @@ const Home = () => {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-100 to-green-100 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-8">
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div className="bg-white rounded-lg p-6">
                     <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
@@ -188,7 +188,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-green-500 py-16">
+      <section className="bg-gradient-to-r from-[#1E272D] to-[#6B7473] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             {t('services.cta.title')}

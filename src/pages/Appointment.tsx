@@ -2,8 +2,10 @@ import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { Calendar, Clock, User, Phone, Mail, MessageSquare, CreditCard, CheckCircle } from 'lucide-react';
 import 'react-datepicker/dist/react-datepicker.css';
+import { useTranslation } from '../contexts/LanguageContext';
 
 const Appointment = () => {
+  const { t } = useTranslation();
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState('');
   const [step, setStep] = useState(1);
@@ -17,11 +19,11 @@ const Appointment = () => {
   });
 
   const services = [
-    { id: 'financial', name: 'Finansal Danışmanlık', price: '$150' },
-    { id: 'accounting', name: 'Muhasebe Servisi', price: '$100' },
-    { id: 'notary', name: 'Noterlik ve Tercümanlık', price: '$80' },
-    { id: 'insurance', name: 'Sigorta Hizmetleri', price: '$120' },
-    { id: 'consultation', name: 'Genel Danışmanlık', price: '$75' }
+    { id: 'financial', name: t('navigation.financialServices') },
+    { id: 'accounting', name: t('navigation.accountingServices') },
+    { id: 'notary', name: t('navigation.notaryServices') },
+    { id: 'insurance', name: t('navigation.insuranceServices') },
+    { id: 'consultation', name: t('appointment.generalConsultation') }
   ];
 
   const timeSlots = [
@@ -31,10 +33,10 @@ const Appointment = () => {
   ];
 
   const paymentMethods = [
-    { id: 'stripe', name: 'Kredi Kartı ile Ödeme', description: 'Stripe güvenli ödeme' },
-    { id: 'paypal', name: 'PayPal', description: 'PayPal hesabınızla ödeyin' },
-    { id: 'bank', name: 'Banka Havalesi', description: 'Banka hesabına havale' },
-    { id: 'cash', name: 'Nakit Ödeme', description: 'Randevu sırasında nakit ödeme' }
+    { id: 'stripe', name: t('payment.creditCard'), description: t('payment.secure') },
+    { id: 'paypal', name: t('payment.paypal'), description: t('payment.paypalDescription') },
+    { id: 'bank', name: t('payment.bankTransfer'), description: t('payment.bankDescription') },
+    { id: 'cash', name: t('payment.cash'), description: t('payment.cashDescription') }
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -76,11 +78,11 @@ const Appointment = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-green-700 text-white py-16">
+      <section className="bg-gradient-to-br from-[#1E272D] to-[#6B7473] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4">Randevu Al</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4">{t('appointment.title')}</h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Uzman ekibimizle görüşmek için randevu alın. Online ödeme seçenekleri mevcuttur.
+            {t('appointment.subtitle')}
           </p>
         </div>
       </section>
@@ -90,11 +92,11 @@ const Appointment = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             {[
-              { number: 1, title: 'Hizmet Seçimi', icon: User },
-              { number: 2, title: 'Tarih & Saat', icon: Calendar },
-              { number: 3, title: 'Bilgiler', icon: MessageSquare },
-              { number: 4, title: 'Ödeme', icon: CreditCard },
-              { number: 5, title: 'Onay', icon: CheckCircle }
+              { number: 1, title: t('appointment.steps.service'), icon: User },
+              { number: 2, title: t('appointment.steps.datetime'), icon: Calendar },
+              { number: 3, title: t('appointment.steps.info'), icon: MessageSquare },
+              { number: 4, title: t('appointment.steps.payment'), icon: CreditCard },
+              { number: 5, title: t('appointment.steps.confirmation'), icon: CheckCircle }
             ].map((stepItem) => {
               const Icon = stepItem.icon;
               return (
@@ -128,7 +130,7 @@ const Appointment = () => {
             {/* Step 1: Service Selection */}
             {step === 1 && (
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Hizmet Seçin</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('appointment.selectService')}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {services.map((service) => (
                     <div
@@ -140,13 +142,10 @@ const Appointment = () => {
                       }`}
                       onClick={() => setFormData({ ...formData, service: service.id })}
                     >
-                      <div className="flex justify-between items-center">
+                      <div className="text-center">
                         <h3 className="text-xl font-semibold text-gray-900">
                           {service.name}
                         </h3>
-                        <span className="text-2xl font-bold text-blue-600">
-                          {service.price}
-                        </span>
                       </div>
                     </div>
                   ))}
@@ -155,9 +154,9 @@ const Appointment = () => {
                   <button
                     onClick={handleNextStep}
                     disabled={!formData.service}
-                    className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white px-8 py-3 rounded-lg font-semibold hover:from-[#2A363E] hover:to-[#7A8588] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Devam Et
+                    {t('appointment.form.continue')}
                   </button>
                 </div>
               </div>
@@ -166,10 +165,10 @@ const Appointment = () => {
             {/* Step 2: Date & Time Selection */}
             {step === 2 && (
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Tarih ve Saat Seçin</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('appointment.selectDateTime')}</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Tarih Seçin</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('appointment.form.selectDate')}</h3>
                     <DatePicker
                       selected={selectedDate}
                       onChange={(date) => setSelectedDate(date)}
@@ -182,7 +181,7 @@ const Appointment = () => {
                   
                   {selectedDate && (
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-4">Saat Seçin</h3>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('appointment.form.selectTime')}</h3>
                       <div className="grid grid-cols-3 gap-3">
                         {timeSlots.map((time) => (
                           <button
@@ -207,14 +206,14 @@ const Appointment = () => {
                     onClick={handlePrevStep}
                     className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
                   >
-                    Geri
+                    {t('common.previous')}
                   </button>
                   <button
                     onClick={handleNextStep}
                     disabled={!selectedDate || !selectedTime}
-                    className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white px-8 py-3 rounded-lg font-semibold hover:from-[#2A363E] hover:to-[#7A8588] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Devam Et
+                    {t('appointment.form.continue')}
                   </button>
                 </div>
               </div>
@@ -223,12 +222,12 @@ const Appointment = () => {
             {/* Step 3: Personal Information */}
             {step === 3 && (
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Kişisel Bilgiler</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('appointment.personalInfo')}</h2>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Ad Soyad *
+                        {t('appointment.form.fullName')} *
                       </label>
                       <input
                         type="text"
@@ -236,12 +235,13 @@ const Appointment = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
+                        placeholder={t('appointment.form.placeholders.fullName')}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        E-posta *
+                        {t('appointment.form.email')} *
                       </label>
                       <input
                         type="email"
@@ -249,6 +249,7 @@ const Appointment = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
+                        placeholder={t('appointment.form.placeholders.email')}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
@@ -256,7 +257,7 @@ const Appointment = () => {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Telefon *
+                      {t('appointment.form.phone')} *
                     </label>
                     <input
                       type="tel"
@@ -264,13 +265,14 @@ const Appointment = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
+                      placeholder={t('appointment.form.placeholders.phone')}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Mesaj (Opsiyonel)
+                      {t('appointment.form.message')}
                     </label>
                     <textarea
                       name="message"
@@ -278,7 +280,7 @@ const Appointment = () => {
                       onChange={handleChange}
                       rows={4}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Randevunuz hakkında detaylar..."
+                      placeholder={t('appointment.form.placeholders.message')}
                     />
                   </div>
                 </form>
@@ -288,14 +290,14 @@ const Appointment = () => {
                     onClick={handlePrevStep}
                     className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
                   >
-                    Geri
+                    {t('common.previous')}
                   </button>
                   <button
                     onClick={handleNextStep}
                     disabled={!formData.name || !formData.email || !formData.phone}
-                    className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white px-8 py-3 rounded-lg font-semibold hover:from-[#2A363E] hover:to-[#7A8588] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Devam Et
+                    {t('appointment.form.continue')}
                   </button>
                 </div>
               </div>
@@ -304,31 +306,27 @@ const Appointment = () => {
             {/* Step 4: Payment */}
             {step === 4 && (
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Ödeme Yöntemi</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('appointment.paymentMethod')}</h2>
                 
                 {/* Selected Service Summary */}
                 <div className="bg-gray-50 rounded-lg p-6 mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Randevu Özeti</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('appointment.appointmentSummary')}</h3>
                   <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span>Hizmet:</span>
+                    <div>
+                      <span>{t('appointment.summary.service')}: </span>
                       <span className="font-medium">
                         {services.find(s => s.id === formData.service)?.name}
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Tarih:</span>
+                    <div>
+                      <span>{t('appointment.summary.date')}: </span>
                       <span className="font-medium">
                         {selectedDate?.toLocaleDateString('tr-TR')}
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Saat:</span>
+                    <div>
+                      <span>{t('appointment.summary.time')}: </span>
                       <span className="font-medium">{selectedTime}</span>
-                    </div>
-                    <div className="flex justify-between text-lg font-bold text-blue-600 border-t pt-2 mt-4">
-                      <span>Toplam:</span>
-                      <span>{services.find(s => s.id === formData.service)?.price}</span>
                     </div>
                   </div>
                 </div>
@@ -369,14 +367,14 @@ const Appointment = () => {
                     onClick={handlePrevStep}
                     className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
                   >
-                    Geri
+                    {t('common.previous')}
                   </button>
                   <button
                     onClick={handleSubmit}
                     disabled={!formData.paymentMethod}
-                    className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white px-8 py-3 rounded-lg font-semibold hover:from-[#2A363E] hover:to-[#7A8588] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Randevuyu Onayla
+                    {t('appointment.form.confirmAppointment')}
                   </button>
                 </div>
               </div>
@@ -388,49 +386,40 @@ const Appointment = () => {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <CheckCircle className="w-10 h-10 text-green-600" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Randevunuz Oluşturuldu!</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('appointment.success')}</h2>
                 <p className="text-xl text-gray-600 mb-8">
-                  Randevu detayları e-posta adresinize gönderildi. 
-                  Randevu saatinden 15 dakika önce bekliyoruz.
+                  {t('appointment.successMessage')}
                 </p>
                 
                 <div className="bg-gray-50 rounded-lg p-6 mb-8 text-left max-w-md mx-auto">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Randevu Detayları</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('appointment.appointmentSummary')}</h3>
                   <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span>Hizmet:</span>
+                    <div>
+                      <span>{t('appointment.summary.service')}: </span>
                       <span className="font-medium">
                         {services.find(s => s.id === formData.service)?.name}
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Tarih:</span>
+                    <div>
+                      <span>{t('appointment.summary.date')}: </span>
                       <span className="font-medium">
                         {selectedDate?.toLocaleDateString('tr-TR')}
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Saat:</span>
+                    <div>
+                      <span>{t('appointment.summary.time')}: </span>
                       <span className="font-medium">{selectedTime}</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <button
-                    onClick={() => window.print()}
-                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+                <div>
+                  <a
+                    href="/"
+                    className="bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white px-8 py-3 rounded-lg font-semibold hover:from-[#2A363E] hover:to-[#7A8588] transition-all inline-block"
                   >
-                    Yazdır
-                  </button>
-                  <div>
-                    <a
-                      href="/"
-                      className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-600 transition-all inline-block"
-                    >
-                      Ana Sayfaya Dön
-                    </a>
-                  </div>
+                    {t('appointment.backToHome')}
+                  </a>
                 </div>
               </div>
             )}

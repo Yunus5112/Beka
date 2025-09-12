@@ -1,62 +1,37 @@
 import { Link } from 'react-router-dom';
 import { TrendingUp, Award, FileText, Shield, ArrowRight, CheckCircle } from 'lucide-react';
+import { useTranslation } from '../contexts/LanguageContext';
 
 const Services = () => {
+  const { t } = useTranslation();
+  
   const services = [
     {
       id: 'financial',
-      title: 'Finansal Danışmanlık',
-      subtitle: 'FINANSAL DANIŞMANLIK',
-      description: 'İşletmenizin finansal büyümesi için kapsamlı danışmanlık hizmetleri',
+      title: t('services.financial.title'),
       icon: TrendingUp,
-      features: [
-        'SBA LOANS - İşletme kredileri',
-        'GRANTS-HIBELER - Hibe başvuruları',
-        'Finansal planlama ve strateji geliştirme',
-        'Yatırım danışmanlığı'
-      ],
+      features: t('services.financial.serviceFeatures'),
       link: '/services/financial'
     },
     {
       id: 'accounting',
-      title: 'Muhasebe Servisi',
-      subtitle: 'Accounting - Muhasebe Servisi',
-      description: 'Kişisel ve kurumsal vergi beyannameleri ile muhasebe hizmetleri',
+      title: t('services.accounting.title'),
       icon: Award,
-      features: [
-        'Personal Tax Return - Kişisel Vergi Beyannamesi',
-        'Business Tax Return - Şirket Vergi Beyannamesi',
-        'Genel muhasebe hizmetleri',
-        'Mali müşavirlik'
-      ],
+      features: t('services.accounting.serviceFeatures'),
       link: '/services/accounting'
     },
     {
       id: 'notary',
-      title: 'Noterlik ve Tercümanlık',
-      subtitle: 'NOTERLIK VE TERCUMANLIK IŞLEMLERI',
-      description: 'Resmi evrak işlemleri ve profesyonel tercüme hizmetleri',
+      title: t('services.notary.title'),
       icon: FileText,
-      features: [
-        'Noterlik işlemleri',
-        'Tercüme işlemleri - Translation',
-        'Belge onaylama ve tasdik',
-        'Resmi evrak düzenleme'
-      ],
+      features: t('services.notary.serviceFeatures'),
       link: '/services/notary'
     },
     {
       id: 'insurance',
-      title: 'Sigorta Hizmetleri',
-      subtitle: 'Şirket Kurulumu',
-      description: 'Şirket kurulumu ve sigorta çözümleri',
+      title: t('services.insurance.title'),
       icon: Shield,
-      features: [
-        'Eyalet Başvuruları, IRS Başvuruları',
-        'İşletme Lisanslarının başvuruları',
-        'Ortaklık anlaşmaları, Alım satım anlaşmaları',
-        'İş yerleri için Worker Comps and Business Sigortası'
-      ],
+      features: t('services.insurance.serviceFeatures'),
       link: '/services/insurance'
     }
   ];
@@ -64,12 +39,11 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-green-700 text-white py-20">
+      <section className="bg-gradient-to-br from-[#1E272D] to-[#6B7473] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Hizmetlerimiz</h1>
+          <h1 className="text-5xl font-bold mb-6">{t('services.title')}</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            İşletmenizin her alanında uzman danışmanlık hizmetleri ile yanınızdayız. 
-            Servislerimiz için bizimle iletişime geçebilirsiniz.
+            {t('services.subtitle')}
           </p>
         </div>
       </section>
@@ -86,25 +60,19 @@ const Services = () => {
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100"
                 >
                   <div className="flex items-start space-x-4 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#1E272D] to-[#6B7473] rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
                         {service.title}
                       </h3>
-                      <p className="text-blue-600 font-medium text-sm uppercase tracking-wide">
-                        {service.subtitle}
-                      </p>
                     </div>
                   </div>
 
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
 
                   <div className="space-y-3 mb-8">
-                    {service.features.map((feature, featureIndex) => (
+                    {Array.isArray(service.features) && service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-start space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700">{feature}</span>
@@ -114,9 +82,9 @@ const Services = () => {
 
                   <Link
                     to={service.link}
-                    className="inline-flex items-center bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-green-600 transition-all group"
+                    className="inline-flex items-center bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white px-6 py-3 rounded-lg hover:from-[#2A363E] hover:to-[#7A8588] transition-all group"
                   >
-                    <span>Detayları Görüntüle</span>
+                    <span>{t('services.seeDetails')}</span>
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -138,7 +106,7 @@ const Services = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/appointment"
-              className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-green-600 transition-colors"
+              className="bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white px-8 py-4 rounded-lg font-semibold hover:from-[#2A363E] hover:to-[#7A8588] transition-colors"
             >
               Ücretsiz Danışmanlık Al
             </Link>
@@ -152,30 +120,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Contact Info */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-blue-600 to-green-500 rounded-2xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-6">
-              Servislerimiz için bizimle iletişime geçebilirsiniz
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div>
-                <p className="font-semibold mb-2">Telefon</p>
-                <p className="text-lg">+1-857-343-3120</p>
-              </div>
-              <div>
-                <p className="font-semibold mb-2">E-posta</p>
-                <p className="text-lg">bostonconsultinghub@gmail.com</p>
-              </div>
-              <div>
-                <p className="font-semibold mb-2">Web Sitesi</p>
-                <p className="text-lg">www.bostonconsultinghub.com</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

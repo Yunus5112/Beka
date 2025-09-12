@@ -46,6 +46,7 @@
     "subtitle": "You can contact us for our services",
     "seeDetails": "See Details",
     "whyChooseUs": "Why Choose Beka Solutions?",
+    "ourProcess": "Our Process",
     "whyChooseUsDesc": "We contribute to the success of businesses in the Boston area by providing reliable consulting services.",
     "features": {
       "0": "Professional service with expert staff",
@@ -66,35 +67,302 @@
     "financial": {
       "title": "Financial Consulting",
       "description": "Expert consulting for SBA Loans and Grants-Subsidies",
-      "features": ["SBA LOANS", "GRANTS-SUBSIDIES"]
+      "features": ["SBA LOANS", "GRANTS-SUBSIDIES"],
+      "serviceFeatures": [
+        "SBA LOANS - Business loans",
+        "GRANTS-SUBSIDIES - Grant applications", 
+        "Financial planning and strategy development",
+        "Investment consulting"
+      ],
+      "detailPage": {
+        "hero": {
+          "title": "Financial Consulting",
+          "subtitle": "Professional Consulting Services",
+          "description": "We provide comprehensive consulting services for your business's financial growth and development."
+        },
+        "services": [
+          {
+            "title": "SBA LOANS",
+            "description": "Grow your business with Small Business Administration loans",
+            "features": [
+              "Low interest rates",
+              "Long-term options",
+              "Application process guidance",
+              "Credit approval support"
+            ]
+          },
+          {
+            "title": "GRANTS-SUBSIDIES",
+            "description": "Benefit from government grants and private sector subsidies",
+            "features": [
+              "Grant research and discovery",
+              "Preparation of application documents",
+              "Process tracking",
+              "Non-repayable financing"
+            ]
+          }
+        ],
+        "benefits": [
+          "Professional financial consulting",
+          "Comprehensive market analysis",
+          "Strategic planning support",
+          "Risk management"
+        ],
+        "process": [
+          { "step": "1", "title": "Consultation", "description": "We analyze your needs" },
+          { "step": "2", "title": "Planning", "description": "We create a strategic plan" },
+          { "step": "3", "title": "Application", "description": "We handle applications" },
+          { "step": "4", "title": "Follow-up", "description": "We track the process" }
+        ],
+        "cta": {
+          "title": "Ready to Grow Your Business?",
+          "description": "Contact us for professional financial consulting services.",
+          "button": "Get Started"
+        }
+      }
     },
     "accounting": {
       "title": "Accounting Services",
       "description": "Personal Tax Return, Business Tax Return and general accounting services",
-      "features": ["Personal Tax Return", "Business Tax Return"]
+      "features": ["Personal Tax Return", "Business Tax Return"],
+      "serviceFeatures": [
+        "Personal Tax Return - Individual Tax Filing",
+        "Business Tax Return - Corporate Tax Filing",
+        "General accounting services",
+        "Financial advisory"
+      ],
+      "detailPage": {
+        "hero": {
+          "title": "Accounting Services",
+          "subtitle": "Professional Tax and Accounting Solutions",
+          "description": "Complete accounting services for individuals and businesses. Expert tax preparation and financial management."
+        },
+        "services": [
+          {
+            "title": "Personal Tax Return",
+            "description": "Individual tax filing services with maximum deductions",
+            "features": [
+              "Federal and state tax preparation",
+              "Deduction optimization",
+              "Tax planning consultation",
+              "Electronic filing"
+            ]
+          },
+          {
+            "title": "Business Tax Return",
+            "description": "Corporate tax filing and business accounting services",
+            "features": [
+              "Corporate tax preparation",
+              "Business financial statements",
+              "Quarterly tax planning",
+              "IRS compliance support"
+            ]
+          }
+        ],
+        "benefits": [
+          "Expert tax preparation",
+          "Maximize your refunds",
+          "Year-round support",
+          "IRS audit protection"
+        ],
+        "process": [
+          { "step": "1", "title": "Document Review", "description": "We review your financial documents" },
+          { "step": "2", "title": "Tax Preparation", "description": "We prepare your tax returns" },
+          { "step": "3", "title": "Review & Filing", "description": "We review and file your taxes" },
+          { "step": "4", "title": "Follow-up", "description": "We provide ongoing support" }
+        ],
+        "cta": {
+          "title": "Ready to File Your Taxes?",
+          "description": "Contact us for professional tax preparation and accounting services.",
+          "button": "Get Started"
+        }
+      }
     },
     "notary": {
       "title": "Notary & Translation",
       "description": "Official document processing and professional translation services",
-      "features": ["Notary Services", "Translation Services"]
+      "features": ["Notary Services", "Translation Services"],
+      "serviceFeatures": [
+        "Notary services",
+        "Translation services",
+        "Document certification and attestation",
+        "Official document preparation"
+      ],
+      "detailPage": {
+        "hero": {
+          "title": "Notary & Translation Services",
+          "subtitle": "Official Document Processing",
+          "description": "Professional notary and translation services for all your official document needs."
+        },
+        "services": [
+          {
+            "title": "Notary Services",
+            "description": "Official notarization of legal documents",
+            "features": [
+              "Document notarization",
+              "Oath administration",
+              "Identity verification",
+              "Legal document certification"
+            ]
+          },
+          {
+            "title": "Translation Services",
+            "description": "Professional translation for official documents",
+            "features": [
+              "Certified translations",
+              "Legal document translation",
+              "Multilingual services",
+              "Official document preparation"
+            ]
+          }
+        ],
+        "benefits": [
+          "Certified professionals",
+          "Quick turnaround",
+          "Legal compliance",
+          "Multilingual support"
+        ],
+        "process": [
+          { "step": "1", "title": "Document Submission", "description": "Submit your documents to us" },
+          { "step": "2", "title": "Review", "description": "We review documents and provide quote" },
+          { "step": "3", "title": "Processing", "description": "We perform professional services" },
+          { "step": "4", "title": "Delivery", "description": "We deliver completed documents" }
+        ],
+        "cta": {
+          "title": "Need Document Services?",
+          "description": "Contact us for professional notary and translation services.",
+          "button": "Get Started"
+        }
+      }
     },
     "insurance": {
       "title": "Insurance Services",
       "description": "Company establishment and Worker Comps & Business Insurance",
-      "features": ["Company Formation", "Worker Comps & Business Insurance"]
+      "features": ["Company Formation", "Worker Comps & Business Insurance"],
+      "serviceFeatures": [
+        "State Applications, IRS Applications",
+        "Business License applications",
+        "Partnership agreements, Buy-sell agreements",
+        "Worker Comps and Business Insurance for workplaces"
+      ],
+      "detailPage": {
+        "hero": {
+          "title": "Insurance Services",
+          "subtitle": "Company Formation & Business Protection",
+          "description": "Complete business formation and insurance solutions to protect and grow your company."
+        },
+        "services": [
+          {
+            "title": "Company Formation",
+            "description": "Complete business setup and registration services",
+            "features": [
+              "State Applications, IRS Applications",
+              "Business License applications",
+              "Partnership agreements",
+              "Buy-sell agreements"
+            ]
+          },
+          {
+            "title": "Business Insurance",
+            "description": "Comprehensive insurance coverage for your business",
+            "features": [
+              "Worker Compensation Insurance",
+              "General Liability Insurance",
+              "Professional Liability Coverage",
+              "Business Property Insurance"
+            ]
+          }
+        ],
+        "benefits": [
+          "Complete business protection",
+          "Legal compliance assurance",
+          "Risk management",
+          "Professional guidance"
+        ],
+        "process": [
+          { "step": "1", "title": "Consultation", "description": "We assess your business needs" },
+          { "step": "2", "title": "Formation", "description": "We handle business registration" },
+          { "step": "3", "title": "Insurance", "description": "We secure appropriate coverage" },
+          { "step": "4", "title": "Ongoing Support", "description": "We provide continued assistance" }
+        ],
+        "cta": {
+          "title": "Ready to Protect Your Business?",
+          "description": "Contact us for comprehensive business formation and insurance services.",
+          "button": "Get Started"
+        }
+      }
     }
   },
   "about": {
     "title": "About Us",
     "subtitle": "Who we are",
-    "description": "As Beka Solutions Boston Consulting Hub, we contribute to the success of businesses in the Boston area by providing comprehensive consulting services.",
-    "whoWeAre": "Who We Are",
-    "ourValues": "Our Values",
-    "ourTeam": "Our Team",
-    "mission": "Our Mission",
-    "vision": "Our Vision",
-    "missionText": "To help businesses achieve sustainable growth and success by optimizing their financial and operational processes. To be a reliable business partner by providing value-added solutions to our customers.",
-    "visionText": "To become a leader in the consulting sector in the Boston area and to be the first choice of our customers. To make a difference with our innovative approaches and continuously improving service quality."
+    "description": "As Beka Solutions, we contribute to the success of businesses in the Boston area by providing comprehensive consulting services.",
+    "hero": {
+      "title": "About Us",
+      "description": "As Beka Solutions, we contribute to the success of businesses in the Boston area by providing comprehensive consulting services."
+    },
+    "whoWeAre": {
+      "title": "Who We Are",
+      "paragraph1": "Beka Solutions Boston Consulting Hub was established in 2019 and provides financial consulting, accounting, notary and insurance services to businesses in Boston and surrounding areas.",
+      "paragraph2": "With our approach that blends Turkish and American business cultures, we offer solutions to our customers from both local and international perspectives.",
+      "paragraph3": "Thanks to our expert staff, we develop customized solutions for your business needs and create strategies for sustainable growth."
+    },
+    "achievements": {
+      "title": "Our Achievements",
+      "successfulProjects": "Successful Projects",
+      "corporateClients": "Corporate Clients",
+      "yearsExperience": "Years Experience",
+      "customerSupport": "Customer Support"
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The fundamental principles and values we adopt while doing business",
+      "professionalism": {
+        "title": "Professionalism",
+        "description": "We apply the highest quality standards in every project."
+      },
+      "reliability": {
+        "title": "Reliability", 
+        "description": "We build long-term trust relationships with our customers."
+      },
+      "customerFocus": {
+        "title": "Customer Focus",
+        "description": "Customer satisfaction is our most important priority."
+      },
+      "expertise": {
+        "title": "Expertise",
+        "description": "We provide the best service with our expert staff in their field."
+      }
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "We are at your service with our expert and experienced team",
+      "members": [
+        {
+          "name": "Ahmet Beka",
+          "position": "Founder & CEO",
+          "description": "10+ years of experience in financial consulting"
+        },
+        {
+          "name": "Ayşe Demir",
+          "position": "Accounting Specialist",
+          "description": "CPA certified accounting specialist"
+        },
+        {
+          "name": "Mehmet Yılmaz",
+          "position": "Insurance Specialist",
+          "description": "Insurance and risk management specialist"
+        }
+      ]
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To help businesses achieve sustainable growth and success by optimizing their financial and operational processes. To be a trusted business partner of our customers by providing solutions that will add value to them."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become a leader in the consulting sector in the Boston area and to be the first choice of our customers. To lead the sector with our innovative approaches and make a difference with our continuously improving service quality."
+    }
   },
   "contact": {
     "title": "Get In Touch",
@@ -102,16 +370,22 @@
     "form": {
       "name": "Full Name",
       "email": "Email",
-      "phone": "Phone",
+      "phone": "Phone", 
       "subject": "Subject",
       "message": "Message",
       "send": "Send Message",
-      "required": "Required"
+      "required": "Required",
+      "generalInfo": "General Information",
+      "appointmentRequest": "Appointment Request"
     },
     "info": {
-      "workingHours": "Working Hours",
-      "emergency": "Emergency Contact",
-      "location": "Office Location"
+      "workingHours": "Working Hours"
+    },
+    "workingHours": {
+      "mondayFriday": "Monday - Friday",
+      "saturday": "Saturday", 
+      "sunday": "Sunday",
+      "closed": "Closed"
     }
   },
   "appointment": {
@@ -130,7 +404,32 @@
     "paymentMethod": "Payment Method",
     "appointmentSummary": "Appointment Summary",
     "success": "Appointment Created!",
-    "successMessage": "Appointment details have been sent to your email address. We expect you 15 minutes before your appointment time."
+    "successMessage": "Appointment details have been sent to your email address.",
+    "generalConsultation": "General Consultation",
+    "form": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Message (Optional)",
+      "selectDate": "Select Date",
+      "selectTime": "Select Time",
+      "continue": "Continue",
+      "complete": "Complete Appointment",
+      "confirmAppointment": "Confirm Appointment",
+      "placeholders": {
+        "fullName": "Enter your full name",
+        "email": "Enter your email address",
+        "phone": "Enter your phone number",
+        "message": "Details about your appointment..."
+      }
+    },
+    "summary": {
+      "service": "Service",
+      "date": "Date",
+      "time": "Time",
+      "total": "Total"
+    },
+    "backToHome": "Back to Home"
   },
   "footer": {
     "companyInfo": "Professional consulting services to contribute to the growth of your business.",
@@ -146,6 +445,9 @@
     "paypal": "PayPal",
     "bankTransfer": "Bank Transfer",
     "cash": "Cash Payment",
-    "secure": "Secure payment processing with SSL encryption"
+    "secure": "Secure payment processing with SSL encryption",
+    "paypalDescription": "Pay with your PayPal account",
+    "bankDescription": "Bank transfer payment",
+    "cashDescription": "Cash payment during appointment"
   }
 }

@@ -46,6 +46,7 @@
     "subtitle": "Servislerimiz için bizimle iletişime geçebilirsiniz",
     "seeDetails": "Detayları Gör",
     "whyChooseUs": "Neden Beka Solutions?",
+    "ourProcess": "İş Sürecimiz",
     "whyChooseUsDesc": "Boston bölgesinde güvenilir danışmanlık hizmetleri sunarak işletmenizin büyümesine katkıda bulunuyoruz.",
     "features": {
       "0": "Uzman kadro ile profesyonel hizmet",
@@ -66,52 +67,325 @@
     "financial": {
       "title": "Finansal Danışmanlık",
       "description": "SBA Loans ve Grants-Hibeler konularında uzman danışmanlık",
-      "features": ["SBA LOANS", "GRANTS-HIBELER"]
+      "features": ["SBA LOANS", "GRANTS-HIBELER"],
+      "serviceFeatures": [
+        "SBA LOANS - İşletme kredileri",
+        "GRANTS-HIBELER - Hibe başvuruları",
+        "Finansal planlama ve strateji geliştirme",
+        "Yatırım danışmanlığı"
+      ],
+      "detailPage": {
+        "hero": {
+          "title": "Finansal Danışmanlık",
+          "subtitle": "Profesyonel Danışmanlık Hizmetleri",
+          "description": "İşletmenizin finansal büyümesi ve gelişimi için kapsamlı danışmanlık hizmetleri sunuyoruz."
+        },
+        "services": [
+          {
+            "title": "SBA LOANS",
+            "description": "Small Business Administration kredileri ile işletmenizi büyütün",
+            "features": [
+              "Düşük faiz oranları",
+              "Uzun vade seçenekleri",
+              "Başvuru sürecinde rehberlik",
+              "Kredi onay desteği"
+            ]
+          },
+          {
+            "title": "GRANTS-HIBELER",
+            "description": "Devlet hibeleri ve özel sektör hibelerinden yararlanın",
+            "features": [
+              "Hibe araştırması ve bulma",
+              "Başvuru belgelerinin hazırlanması",
+              "Süreç takibi",
+              "Geri ödemesiz finansman"
+            ]
+          }
+        ],
+        "benefits": [
+          "Profesyonel finansal danışmanlık",
+          "Kapsamlı piyasa analizi",
+          "Stratejik planlama desteği",
+          "Risk yönetimi"
+        ],
+        "process": [
+          { "step": "1", "title": "Danışmanlık", "description": "İhtiyaçlarınızı analiz ediyoruz" },
+          { "step": "2", "title": "Planlama", "description": "Stratejik plan oluşturuyoruz" },
+          { "step": "3", "title": "Başvuru", "description": "Başvuru işlemlerini yürütüyoruz" },
+          { "step": "4", "title": "Takip", "description": "Süreci takip ediyoruz" }
+        ],
+        "cta": {
+          "title": "İşletmenizi Büyütmek İçin Hazır mısınız?",
+          "description": "Profesyonel finansal danışmanlık hizmetleri için bizimle iletişime geçin.",
+          "button": "Başlayın"
+        }
+      }
     },
     "accounting": {
       "title": "Muhasebe Servisi",
       "description": "Personal Tax Return, Business Tax Return ve genel muhasebe hizmetleri",
-      "features": ["Personal Tax Return - Kişisel Vergi Beyannamesi", "Business Tax Return - Şirket Vergi Beyannamesi"]
+      "features": ["Personal Tax Return - Kişisel Vergi Beyannamesi", "Business Tax Return - Şirket Vergi Beyannamesi"],
+      "serviceFeatures": [
+        "Personal Tax Return - Kişisel Vergi Beyannamesi",
+        "Business Tax Return - Şirket Vergi Beyannamesi",
+        "Genel muhasebe hizmetleri",
+        "Mali müşavirlik"
+      ],
+      "detailPage": {
+        "hero": {
+          "title": "Muhasebe Servisi",
+          "subtitle": "Profesyonel Vergi ve Muhasebe Çözümleri",
+          "description": "Bireysel ve kurumsal müşteriler için eksiksiz muhasebe hizmetleri. Uzman vergi hazırlığı ve finansal yönetim."
+        },
+        "services": [
+          {
+            "title": "Personal Tax Return",
+            "description": "Maksimum kesinti ile bireysel vergi beyannamesi hizmetleri",
+            "features": [
+              "Federal ve eyalet vergi hazırlığı",
+              "Kesinti optimizasyonu",
+              "Vergi planlama danışmanlığı",
+              "Elektronik dosyalama"
+            ]
+          },
+          {
+            "title": "Business Tax Return",
+            "description": "Kurumsal vergi beyannamesi ve işletme muhasebe hizmetleri",
+            "features": [
+              "Kurumsal vergi hazırlığı",
+              "İşletme mali tabloları",
+              "Üç aylık vergi planlaması",
+              "IRS uyumluluk desteği"
+            ]
+          }
+        ],
+        "benefits": [
+          "Uzman vergi hazırlığı",
+          "İadelerinizi maksimize edin",
+          "Yıl boyunca destek",
+          "IRS denetim koruması"
+        ],
+        "process": [
+          { "step": "1", "title": "Belge İncelemesi", "description": "Mali belgelerinizi inceleriz" },
+          { "step": "2", "title": "Vergi Hazırlığı", "description": "Vergi beyannamelerinizi hazırlarız" },
+          { "step": "3", "title": "İnceleme ve Dosyalama", "description": "Vergilerinizi inceler ve dosyalarız" },
+          { "step": "4", "title": "Takip", "description": "Sürekli destek sağlarız" }
+        ],
+        "cta": {
+          "title": "Vergilerinizi Dosyalamaya Hazır mısınız?",
+          "description": "Profesyonel vergi hazırlığı ve muhasebe hizmetleri için bizimle iletişime geçin.",
+          "button": "Başlayın"
+        }
+      }
     },
     "notary": {
       "title": "Noterlik ve Tercümanlık",
       "description": "Resmi evrak işlemleri ve profesyonel tercüme hizmetleri",
-      "features": ["Noterlik işlemleri", "Tercüme işlemleri - Translation"]
+      "features": ["Noterlik işlemleri", "Tercüme işlemleri - Translation"],
+      "serviceFeatures": [
+        "Noterlik işlemleri",
+        "Tercüme işlemleri - Translation",
+        "Belge onaylama ve tasdik",
+        "Resmi evrak düzenleme"
+      ],
+      "detailPage": {
+        "hero": {
+          "title": "Noterlik ve Tercümanlık Hizmetleri",
+          "subtitle": "Resmi Evrak İşlemleri",
+          "description": "Tüm resmi evrak ihtiyaçlarınız için profesyonel noterlik ve tercümanlık hizmetleri."
+        },
+        "services": [
+          {
+            "title": "Noterlik Hizmetleri",
+            "description": "Hukuki belgelerin resmi onaylanması",
+            "features": [
+              "Belge noterliği",
+              "Yemin töreni yönetimi",
+              "Kimlik doğrulama",
+              "Hukuki belge sertifikasyonu"
+            ]
+          },
+          {
+            "title": "Tercümanlık Hizmetleri",
+            "description": "Resmi belgeler için profesyonel tercüme",
+            "features": [
+              "Onaylı çeviriler",
+              "Hukuki belge çevirisi",
+              "Çok dilli hizmetler",
+              "Resmi evrak hazırlama"
+            ]
+          }
+        ],
+        "benefits": [
+          "Sertifikalı profesyoneller",
+          "Hızlı teslimat",
+          "Hukuki uyumluluk",
+          "Çok dilli destek"
+        ],
+        "process": [
+          { "step": "1", "title": "Belge Teslimi", "description": "Belgelerinizi bize teslim edin" },
+          { "step": "2", "title": "İnceleme", "description": "Belgeleri inceleyip fiyat veriyoruz" },
+          { "step": "3", "title": "İşleme", "description": "Profesyonel hizmetleri gerçekleştiriyoruz" },
+          { "step": "4", "title": "Teslimat", "description": "Tamamlanan belgeleri teslim ediyoruz" }
+        ],
+        "cta": {
+          "title": "Belge Hizmetlerine İhtiyacınız Var mı?",
+          "description": "Profesyonel noterlik ve tercümanlık hizmetleri için bizimle iletişime geçin.",
+          "button": "Başlayın"
+        }
+      }
     },
     "insurance": {
       "title": "Sigorta Hizmetleri",
       "description": "Şirket kurulumu ve Worker Comps & Business Sigortası",
-      "features": ["Şirket Kurulumu", "Worker Comps & Business Sigortası"]
+      "features": ["Şirket Kurulumu", "Worker Comps & Business Sigortası"],
+      "serviceFeatures": [
+        "Eyalet Başvuruları, IRS Başvuruları",
+        "İşletme Lisanslarının başvuruları",
+        "Ortaklık anlaşmaları, Alım satım anlaşmaları",
+        "İş yerleri için Worker Comps and Business Sigortası"
+      ],
+      "detailPage": {
+        "hero": {
+          "title": "Sigorta Hizmetleri",
+          "subtitle": "Şirket Kurulumu ve İş Koruması",
+          "description": "Şirketinizi korumak ve büyütmek için eksiksiz şirket kurulumu ve sigorta çözümleri."
+        },
+        "services": [
+          {
+            "title": "Şirket Kurulumu",
+            "description": "Eksiksiz işletme kurulumu ve kayıt hizmetleri",
+            "features": [
+              "Eyalet Başvuruları, IRS Başvuruları",
+              "İşletme Lisansları başvuruları",
+              "Ortaklık anlaşmaları",
+              "Alım satım anlaşmaları"
+            ]
+          },
+          {
+            "title": "İş Sigortası",
+            "description": "İşletmeniz için kapsamlı sigorta teminatı",
+            "features": [
+              "İşçi Tazminat Sigortası",
+              "Genel Sorumluluk Sigortası",
+              "Mesleki Sorumluluk Teminatı",
+              "İş Yeri Mal Sigortası"
+            ]
+          }
+        ],
+        "benefits": [
+          "Eksiksiz işletme koruması",
+          "Hukuki uyumluluk güvencesi",
+          "Risk yönetimi",
+          "Profesyonel rehberlik"
+        ],
+        "process": [
+          { "step": "1", "title": "Danışmanlık", "description": "İş ihtiyaçlarınızı değerlendiririz" },
+          { "step": "2", "title": "Kuruluş", "description": "İşletme kaydını hallederiz" },
+          { "step": "3", "title": "Sigorta", "description": "Uygun teminatı sağlarız" },
+          { "step": "4", "title": "Sürekli Destek", "description": "Devam eden yardım sağlarız" }
+        ],
+        "cta": {
+          "title": "İşletmenizi Korumaya Hazır mısınız?",
+          "description": "Kapsamlı şirket kurulumu ve sigorta hizmetleri için bizimle iletişime geçin.",
+          "button": "Başlayın"
+        }
+      }
     }
   },
   "about": {
     "title": "Hakkımızda",
     "subtitle": "Kim Olduğumuz",
-    "description": "Beka Solutions Boston Consulting Hub olarak, Boston bölgesinde işletmelere kapsamlı danışmanlık hizmetleri sunarak onların başarısına katkıda bulunuyoruz.",
-    "whoWeAre": "Kim Olduğumuz",
-    "ourValues": "Değerlerimiz",
-    "ourTeam": "Ekibimiz",
-    "mission": "Misyonumuz",
-    "vision": "Vizyonumuz",
-    "missionText": "İşletmelerin finansal ve operasyonel süreçlerini optimize ederek, sürdürülebilir büyüme ve başarı elde etmelerine yardımcı olmak. Müşterilerimize değer katacak çözümler sunarak, onların güvenilir iş ortağı olmak.",
-    "visionText": "Boston bölgesinde danışmanlık sektöründe lider konuma gelmek ve müşterilerimizin ilk tercihi olmak. Yenilikçi yaklaşımlarımızla sektöre öncülük etmek ve sürekli gelişen hizmet kalitemizle fark yaratmak."
+    "description": "Beka Solutions olarak, Boston bölgesinde işletmelere kapsamlı danışmanlık hizmetleri sunarak onların başarısına katkıda bulunuyoruz.",
+    "hero": {
+      "title": "Hakkımızda",
+      "description": "Beka Solutions olarak, Boston bölgesinde işletmelere kapsamlı danışmanlık hizmetleri sunarak onların başarısına katkıda bulunuyoruz."
+    },
+    "whoWeAre": {
+      "title": "Kim Olduğumuz",
+      "paragraph1": "Beka Solutions Boston Consulting Hub, 2019 yılında kurulmuş olup, Boston ve çevresindeki işletmelere finansal danışmanlık, muhasebe, noterlik ve sigorta hizmetleri sunmaktadır.",
+      "paragraph2": "Türk ve Amerikan işletme kültürlerini harmanlayan yaklaşımımızla, müşterilerimize hem yerel hem de uluslararası perspektiften çözümler sunuyoruz.",
+      "paragraph3": "Uzman kadromuz sayesinde, işletmenizin ihtiyaçlarına özel çözümler geliştiriyor ve sürdürülebilir büyüme için stratejiler oluşturuyoruz."
+    },
+    "achievements": {
+      "title": "Başarılarımız",
+      "successfulProjects": "Başarılı Proje",
+      "corporateClients": "Kurumsal Müşteri",
+      "yearsExperience": "Yıl Deneyim",
+      "customerSupport": "Müşteri Desteği"
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "subtitle": "İş yaparken benimsediğimiz temel ilkeler ve değerler",
+      "professionalism": {
+        "title": "Profesyonellik",
+        "description": "Her projede en yüksek kalite standartlarını uyguluyoruz."
+      },
+      "reliability": {
+        "title": "Güvenilirlik", 
+        "description": "Müşterilerimizle uzun vadeli güven ilişkileri kuruyoruz."
+      },
+      "customerFocus": {
+        "title": "Müşteri Odaklılık",
+        "description": "Müşteri memnuniyeti bizim en önemli önceliğimizdir."
+      },
+      "expertise": {
+        "title": "Uzmanlık",
+        "description": "Alanında uzman kadromuzla en iyi hizmeti sunuyoruz."
+      }
+    },
+    "team": {
+      "title": "Ekibimiz",
+      "subtitle": "Alanında uzman ve deneyimli ekibimizle hizmetinizdeyiz",
+      "members": [
+        {
+          "name": "Ahmet Beka",
+          "position": "Kurucu & CEO",
+          "description": "Finansal danışmanlık alanında 10+ yıl deneyim"
+        },
+        {
+          "name": "Ayşe Demir",
+          "position": "Muhasebe Uzmanı",
+          "description": "CPA sertifikalı muhasebe uzmanı"
+        },
+        {
+          "name": "Mehmet Yılmaz",
+          "position": "Sigorta Uzmanı",
+          "description": "Sigorta ve risk yönetimi uzmanı"
+        }
+      ]
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "description": "İşletmelerin finansal ve operasyonel süreçlerini optimize ederek, sürdürülebilir büyüme ve başarı elde etmelerine yardımcı olmak. Müşterilerimize değer katacak çözümler sunarak, onların güvenilir iş ortağı olmak."
+    },
+    "vision": {
+      "title": "Vizyonumuz",
+      "description": "Boston bölgesinde danışmanlık sektöründe lider konuma gelmek ve müşterilerimizin ilk tercihi olmak. Yenilikçi yaklaşımlarımızla sektöre öncülük etmek ve sürekli gelişen hizmet kalitemizle fark yaratmak."
+    }
   },
   "contact": {
     "title": "İletişime Geçin",
     "subtitle": "Sorularınız için bizimle iletişime geçin. Uzman ekibimiz size en kısa sürede yardımcı olmak için burada.",
     "form": {
       "name": "Ad Soyad",
-      "email": "E-posta",
+      "email": "E-posta", 
       "phone": "Telefon",
       "subject": "Konu",
       "message": "Mesaj",
       "send": "Mesaj Gönder",
-      "required": "Zorunlu"
+      "required": "Zorunlu",
+      "generalInfo": "Genel Bilgi",
+      "appointmentRequest": "Randevu Talebi"
     },
     "info": {
-      "workingHours": "Çalışma Saatleri",
-      "emergency": "Acil Durum İletişim",
-      "location": "Ofis Konumu"
+      "workingHours": "Çalışma Saatleri"
+    },
+    "workingHours": {
+      "mondayFriday": "Pazartesi - Cuma",
+      "saturday": "Cumartesi",
+      "sunday": "Pazar",
+      "closed": "Kapalı"
     }
   },
   "appointment": {
@@ -130,7 +404,32 @@
     "paymentMethod": "Ödeme Yöntemi",
     "appointmentSummary": "Randevu Özeti",
     "success": "Randevunuz Oluşturuldu!",
-    "successMessage": "Randevu detayları e-posta adresinize gönderildi. Randevu saatinden 15 dakika önce bekliyoruz."
+    "successMessage": "Randevu detayları e-posta adresinize gönderildi.",
+    "generalConsultation": "Genel Danışmanlık",
+    "form": {
+      "fullName": "Ad Soyad",
+      "email": "E-posta Adresi",
+      "phone": "Telefon Numarası",
+      "message": "Mesaj (Opsiyonel)",
+      "selectDate": "Tarih Seçin",
+      "selectTime": "Saat Seçin",
+      "continue": "Devam Et",
+      "complete": "Randevuyu Tamamla",
+      "confirmAppointment": "Randevuyu Onayla",
+      "placeholders": {
+        "fullName": "Adınızı ve soyadınızı girin",
+        "email": "E-posta adresinizi girin",
+        "phone": "Telefon numaranızı girin",
+        "message": "Randevunuz hakkında detaylar..."
+      }
+    },
+    "summary": {
+      "service": "Hizmet",
+      "date": "Tarih",
+      "time": "Saat",
+      "total": "Toplam"
+    },
+    "backToHome": "Ana Sayfaya Dön"
   },
   "footer": {
     "companyInfo": "Profesyonel danışmanlık hizmetleri ile işletmenizin büyümesine katkıda bulunuyoruz.",
@@ -146,6 +445,9 @@
     "paypal": "PayPal",
     "bankTransfer": "Banka Havalesi",
     "cash": "Nakit Ödeme",
-    "secure": "Güvenli ödeme işlemi için SSL şifreleme kullanılmaktadır"
+    "secure": "Güvenli ödeme işlemi için SSL şifreleme kullanılmaktadır",
+    "paypalDescription": "PayPal hesabınızla ödeyin",
+    "bankDescription": "Banka hesabına havale",
+    "cashDescription": "Randevu sırasında nakit ödeme"
   }
 }

@@ -73,7 +73,7 @@ const App = () => {
                 <p className="text-xl text-gray-600 mb-8">Sayfa bulunamadı</p>
                 <a 
                   href="/" 
-                  className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-600 transition-all"
+                  className="bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white px-8 py-3 rounded-lg font-semibold hover:from-[#2A363E] hover:to-[#7A8588] transition-all"
                 >
                   Ana Sayfaya Dön
                 </a>

@@ -3,11 +3,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from '../../contexts/LanguageContext';
 import LanguageSwitcher from '../UI/LanguageSwitcher';
+import BekaLogo from '../../assets/BekaLogo.jpeg';
 
 const Header = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -35,9 +36,11 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">B</span>
-            </div>
+            <img 
+              src={BekaLogo} 
+              alt="Beka Solutions Logo" 
+              className="w-12 h-12 object-contain rounded-lg"
+            />
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-gray-800">BEKA SOLUTIONS</h1>
               <p className="text-sm text-gray-600">Boston Consulting Hub</p>
@@ -45,37 +48,39 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <div key={item.name} className="relative group">
+              <div 
+                key={item.name} 
+                className="relative flex items-center"
+                onMouseEnter={() => setOpenDropdown(item.name)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
                 {item.submenu ? (
-                  <div
-                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer py-2"
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
-                  >
-                    <Link to={item.path} className="font-medium">
-                      {item.name}
-                    </Link>
-                    <ChevronDown className="w-4 h-4" />
+                  <>
+                    <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer font-medium py-2 px-3 rounded-lg transition-colors">
+                      <span>{item.name}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
+                    </button>
                     
                     {/* Dropdown Menu */}
-                    <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border transform transition-all duration-200 ${
-                      isServicesOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'
-                    }`}>
-                      <div className="py-2">
-                        {item.submenu.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.path}
-                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
+                    {openDropdown === item.name && (
+                      <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border z-50">
+                        <div className="py-2">
+                          {item.submenu.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.path}
+                              className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                              onClick={() => setOpenDropdown(null)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </div>
+                    )}
+                  </>
                 ) : (
                   <Link
                     to={item.path}
@@ -83,7 +88,7 @@ const Header = () => {
                       isActive(item.path)
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                    } ${item.name === t('navigation.appointment') ? 'bg-gradient-to-r from-blue-600 to-green-500 text-white hover:from-blue-700 hover:to-green-600' : ''}`}
+                    } ${item.name === t('navigation.appointment') ? 'bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white hover:from-[#2A363E] hover:to-[#7A8588]' : ''}`}
                   >
                     {item.name}
                   </Link>
@@ -118,7 +123,7 @@ const Header = () => {
                       isActive(item.path)
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                    } ${item.name === t('navigation.appointment') ? 'bg-gradient-to-r from-blue-600 to-green-500 text-white' : ''}`}
+                    } ${item.name === t('navigation.appointment') ? 'bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white' : ''}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}

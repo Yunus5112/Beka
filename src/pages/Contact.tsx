@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Globe, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { useTranslation } from '../contexts/LanguageContext';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,45 +36,38 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Telefon',
+      title: t('common.phone'),
       details: '+1-857-343-3120',
       description: 'Pazartesi - Cuma: 09:00 - 18:00'
     },
     {
       icon: Mail,
-      title: 'E-posta',
+      title: t('common.email'),
       details: 'bostonconsultinghub@gmail.com',
       description: '24 saat içinde yanıt garantisi'
     },
     {
       icon: MapPin,
-      title: 'Adres',
+      title: t('common.address'),
       details: '420 Lincoln Ave Saugus MA 01906',
       description: 'Boston, Massachusetts'
-    },
-    {
-      icon: Globe,
-      title: 'Web Sitesi',
-      details: 'www.bostonconsultinghub.com',
-      description: 'Online hizmetler ve bilgiler'
     }
   ];
 
   const workingHours = [
-    { day: 'Pazartesi - Cuma', hours: '09:00 - 18:00' },
-    { day: 'Cumartesi', hours: '10:00 - 16:00' },
-    { day: 'Pazar', hours: 'Kapalı' }
+    { day: t('contact.workingHours.mondayFriday'), hours: '09:00 - 18:00' },
+    { day: t('contact.workingHours.saturday'), hours: '10:00 - 16:00' },
+    { day: t('contact.workingHours.sunday'), hours: t('contact.workingHours.closed') }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-green-700 text-white py-20">
+      <section className="bg-gradient-to-br from-[#1E272D] to-[#6B7473] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">İletişime Geçin</h1>
+          <h1 className="text-5xl font-bold mb-6">{t('contact.title')}</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            Sorularınız için bizimle iletişime geçin. Uzman ekibimiz size en kısa sürede 
-            yardımcı olmak için burada.
+            {t('contact.subtitle')}
           </p>
         </div>
       </section>
@@ -80,7 +75,7 @@ const Contact = () => {
       {/* Contact Information */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
@@ -88,7 +83,7 @@ const Contact = () => {
                   key={index}
                   className="bg-white rounded-xl p-6 shadow-lg text-center group hover:shadow-xl transition-shadow"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#1E272D] to-[#6B7473] rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -111,13 +106,13 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Mesaj Gönderin
+                  {t('contact.form.send')}
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Ad Soyad *
+                        {t('contact.form.name')} *
                       </label>
                       <input
                         type="text"
@@ -127,12 +122,12 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                        placeholder="Adınızı ve soyadınızı girin"
+                        placeholder={t('contact.form.name')}
                       />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        E-posta *
+                        {t('contact.form.email')} *
                       </label>
                       <input
                         type="email"
@@ -142,7 +137,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                        placeholder="E-posta adresinizi girin"
+                        placeholder={t('contact.form.email')}
                       />
                     </div>
                   </div>
@@ -150,7 +145,7 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Telefon
+                        {t('contact.form.phone')}
                       </label>
                       <input
                         type="tel"
@@ -159,12 +154,12 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                        placeholder="Telefon numaranızı girin"
+                        placeholder={t('contact.form.phone')}
                       />
                     </div>
                     <div>
                       <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                        Konu *
+                        {t('contact.form.subject')} *
                       </label>
                       <select
                         id="subject"
@@ -174,20 +169,20 @@ const Contact = () => {
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       >
-                        <option value="">Konu seçin</option>
-                        <option value="financial">Finansal Danışmanlık</option>
-                        <option value="accounting">Muhasebe Servisi</option>
-                        <option value="notary">Noterlik ve Tercümanlık</option>
-                        <option value="insurance">Sigorta Hizmetleri</option>
-                        <option value="general">Genel Bilgi</option>
-                        <option value="appointment">Randevu Talebi</option>
+                        <option value="">{t('contact.form.subject')}</option>
+                        <option value="financial">{t('navigation.financialServices')}</option>
+                        <option value="accounting">{t('navigation.accountingServices')}</option>
+                        <option value="notary">{t('navigation.notaryServices')}</option>
+                        <option value="insurance">{t('navigation.insuranceServices')}</option>
+                        <option value="general">{t('contact.form.generalInfo')}</option>
+                        <option value="appointment">{t('contact.form.appointmentRequest')}</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Mesaj *
+                      {t('contact.form.message')} *
                     </label>
                     <textarea
                       id="message"
@@ -197,16 +192,16 @@ const Contact = () => {
                       required
                       rows={6}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-vertical"
-                      placeholder="Mesajınızı detaylı olarak yazın..."
+                      placeholder={t('contact.form.message')}
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-green-600 transition-all flex items-center justify-center space-x-2"
+                    className="w-full bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white px-8 py-4 rounded-lg font-semibold hover:from-[#2A363E] hover:to-[#7A8588] transition-all flex items-center justify-center space-x-2"
                   >
                     <Send className="w-5 h-5" />
-                    <span>Mesaj Gönder</span>
+                    <span>{t('contact.form.send')}</span>
                   </button>
                 </form>
               </div>
@@ -215,10 +210,10 @@ const Contact = () => {
             {/* Sidebar Info */}
             <div className="space-y-8">
               {/* Working Hours */}
-              <div className="bg-gradient-to-br from-blue-100 to-green-100 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                   <Clock className="w-6 h-6 mr-2 text-blue-600" />
-                  Çalışma Saatleri
+                  {t('contact.info.workingHours')}
                 </h3>
                 <div className="space-y-3">
                   {workingHours.map((schedule, index) => (
@@ -230,39 +225,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Quick Contact */}
-              <div className="bg-gradient-to-r from-blue-600 to-green-500 rounded-xl p-6 text-white">
-                <h3 className="text-xl font-bold mb-4">Acil Durum İletişim</h3>
-                <p className="mb-4">
-                  Acil durumlar için doğrudan telefon ile ulaşabilirsiniz.
-                </p>
-                <a
-                  href="tel:+18573433120"
-                  className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-                >
-                  Hemen Ara
-                </a>
-              </div>
-
-              {/* Location Map */}
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Ofis Konumu
-                </h3>
-                <div className="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
-                  <p className="text-gray-600">
-                    Harita burada görüntülenecek
-                  </p>
-                </div>
-                <div className="mt-4">
-                  <p className="text-gray-700 font-medium">
-                    420 Lincoln Ave Saugus MA 01906
-                  </p>
-                  <p className="text-gray-600 text-sm">
-                    Boston, Massachusetts
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

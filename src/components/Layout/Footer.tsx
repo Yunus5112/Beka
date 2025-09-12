@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Globe, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useTranslation } from '../../contexts/LanguageContext';
+import BekaLogo from '../../assets/BekaLogo.jpeg';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -13,9 +14,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-green-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">B</span>
-              </div>
+              <img 
+                src={BekaLogo} 
+                alt="Beka Solutions Logo" 
+                className="w-10 h-10 object-contain rounded-lg"
+              />
               <div>
                 <h3 className="text-xl font-bold">BEKA SOLUTIONS</h3>
                 <p className="text-gray-300 text-sm">Boston Consulting Hub</p>
@@ -69,10 +72,6 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-blue-400 mt-1" />
                 <span className="text-gray-300">420 Lincoln Ave Saugus MA 01906</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Globe className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">www.bostonconsultinghub.com</span>
-              </div>
             </div>
           </div>
 
@@ -100,7 +99,7 @@ const Footer = () => {
             </div>
             <Link
               to="/appointment"
-              className="inline-block bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-green-600 transition-all"
+              className="inline-block bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white px-6 py-2 rounded-lg hover:from-[#2A363E] hover:to-[#7A8588] transition-all"
             >
               {t('common.appointment')}
             </Link>
@@ -108,18 +107,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="text-center">
             <p className="text-gray-400 text-sm">
               © {currentYear} Beka Solutions. {t('footer.rights')}
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                {t('footer.privacy')}
-              </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                {t('footer.terms')}
-              </Link>
-            </div>
           </div>
         </div>
       </div>
