@@ -1,0 +1,87 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
+
+// Pages
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Appointment from './pages/Appointment';
+
+// Service Pages
+import FinancialServices from './pages/services/FinancialServices';
+import AccountingServices from './pages/services/AccountingServices';
+import NotaryServices from './pages/services/NotaryServices';
+import InsuranceServices from './pages/services/InsuranceServices';
+
+// Simple placeholder components for additional routes
+const Privacy = () => (
+  <div className="min-h-screen bg-gray-50 py-20">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 className="text-4xl font-bold text-gray-900 mb-8">Gizlilik Politikası</h1>
+      <div className="bg-white rounded-lg p-8 shadow-md">
+        <p className="text-gray-600 mb-4">
+          Bu sayfa yakında güncellenecek. Gizlilik politikamız hakkında bilgi almak için bizimle iletişime geçin.
+        </p>
+      </div>
+    </div>
+  </div>
+);
+
+const Terms = () => (
+  <div className="min-h-screen bg-gray-50 py-20">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 className="text-4xl font-bold text-gray-900 mb-8">Kullanım Şartları</h1>
+      <div className="bg-white rounded-lg p-8 shadow-md">
+        <p className="text-gray-600 mb-4">
+          Bu sayfa yakında güncellenecek. Kullanım şartlarımız hakkında bilgi almak için bizimle iletişime geçin.
+        </p>
+      </div>
+    </div>
+  </div>
+);
+
+const App = () => {
+  return (
+    <Router>
+      <Layout>
+        <Routes>
+          {/* Main Pages */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/appointment" element={<Appointment />} />
+          
+          {/* Service Pages */}
+          <Route path="/services/financial" element={<FinancialServices />} />
+          <Route path="/services/accounting" element={<AccountingServices />} />
+          <Route path="/services/notary" element={<NotaryServices />} />
+          <Route path="/services/insurance" element={<InsuranceServices />} />
+          
+          {/* Legal Pages */}
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          
+          {/* 404 Page */}
+          <Route path="*" element={
+            <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+              <div className="text-center">
+                <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+                <p className="text-xl text-gray-600 mb-8">Sayfa bulunamadı</p>
+                <a 
+                  href="/" 
+                  className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-600 transition-all"
+                >
+                  Ana Sayfaya Dön
+                </a>
+              </div>
+            </div>
+          } />
+        </Routes>
+      </Layout>
+    </Router>
+  );
+};
+
+export default App;
