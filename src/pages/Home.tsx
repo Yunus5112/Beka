@@ -1,6 +1,6 @@
-import { TrendingUp, Award, CheckCircle, Users, Calendar, ArrowRight, Target, Heart } from 'lucide-react';
+import { TrendingUp, Award, CheckCircle, Users, Calendar, ArrowRight } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
-import { HeroSection, ServiceCards, BenefitsSection } from '../components/sections';
+import { HeroSection, ServiceCards } from '../components/sections';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -36,24 +36,6 @@ const Home = () => {
     }
   ];
 
-  const benefits = [
-    {
-      title: t('services.features.0') || 'Uzman kadro ile profesyonel hizmet',
-      icon: Target
-    },
-    {
-      title: t('services.features.1') || 'Türkçe ve İngilizce dillerinde destek',
-      icon: Heart
-    },
-    {
-      title: t('services.features.2') || 'Boston bölgesinde güvenilir partner',
-      icon: Users
-    },
-    {
-      title: t('services.features.3') || '7/24 müşteri desteği',
-      icon: CheckCircle
-    }
-  ];
 
   return (
     <div className="min-h-screen">
@@ -83,14 +65,6 @@ const Home = () => {
         columns={2}
       />
 
-      {/* Why Choose Us Section */}
-      <BenefitsSection
-        title={t('services.whyChooseUs')}
-        subtitle={t('services.whyChooseUsDesc')}
-        benefits={benefits}
-        variant="benefits"
-        columns={4}
-      />
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-[#1E272D] to-[#6B7473] py-16">

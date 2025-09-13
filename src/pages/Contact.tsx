@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
 import { HeroSection, ContactCards } from '../components/sections';
 
@@ -23,12 +23,6 @@ const Contact = () => {
       title: t('common.address'),
       details: '420 Lincoln Ave Saugus MA 01906',
       description: t('contact.info.addressDescription')
-    },
-    {
-      icon: Clock,
-      title: t('footer.workingHours.title'),
-      details: `${t('contact.workingHours.mondayFriday')}: 09:00-18:00`,
-      description: `${t('contact.workingHours.saturday')}: 10:00-16:00 | ${t('contact.workingHours.sunday')}`
     }
   ];
 
