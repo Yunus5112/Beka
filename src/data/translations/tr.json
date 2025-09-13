@@ -18,7 +18,9 @@
     "cancel": "İptal",
     "next": "İleri",
     "previous": "Geri",
-    "confirm": "Onayla"
+    "confirm": "Onayla",
+    "callNow": "Hemen Ara",
+    "freeConsultation": "Ücretsiz Danışmanlık"
   },
   "navigation": {
     "home": "Ana Sayfa",
@@ -55,6 +57,7 @@
       "3": "7/24 müşteri desteği"
     },
     "stats": {
+      "title": "Rakamlarla Beka Solutions",
       "happyClients": "Memnun Müşteri",
       "experience": "Yıl Deneyim", 
       "support": "Destek",
@@ -435,10 +438,19 @@
     "companyInfo": "Profesyonel danışmanlık hizmetleri ile işletmenizin büyümesine katkıda bulunuyoruz.",
     "services": "Hizmetlerimiz",
     "contactInfo": "İletişim Bilgileri",
-    "workingHours": "Çalışma Saatleri",
+    "workingHours": {
+      "title": "Çalışma Saatleri",
+      "mondayFriday": "Pazartesi - Cuma",
+      "saturday": "Cumartesi",
+      "sunday": "Pazar: Kapalı"
+    },
     "rights": "Tüm hakları saklıdır.",
     "privacy": "Gizlilik Politikası",
     "terms": "Kullanım Şartları"
+  },
+  "cta": {
+    "title": "İşletmenizi Büyütmek İçin Hazır mısınız?",
+    "description": "Uzman ekibimizle bugün iletişime geçin ve işletmeniz için en uygun çözümleri keşfedin."
   },
   "payment": {
     "creditCard": "Kredi Kartı ile Ödeme",

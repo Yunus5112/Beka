@@ -77,32 +77,26 @@ const Footer = () => {
 
           {/* Working Hours */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">{t('footer.workingHours')}</h3>
+            <h3 className="text-lg font-semibold">{t('footer.workingHours.title')}</h3>
             <div className="space-y-2">
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-blue-400" />
                 <div>
-                  <p className="text-gray-300">Pazartesi - Cuma</p>
+                  <p className="text-gray-300">{t('footer.workingHours.mondayFriday')}</p>
                   <p className="text-sm text-gray-400">09:00 - 18:00</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-blue-400" />
                 <div>
-                  <p className="text-gray-300">Cumartesi</p>
+                  <p className="text-gray-300">{t('footer.workingHours.saturday')}</p>
                   <p className="text-sm text-gray-400">10:00 - 16:00</p>
                 </div>
               </div>
               <div className="text-gray-300">
-                <p>Pazar: Kapalı</p>
+                <p>{t('footer.workingHours.sunday')}</p>
               </div>
             </div>
-            <Link
-              to="/appointment"
-              className="inline-block bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white px-6 py-2 rounded-lg hover:from-[#2A363E] hover:to-[#7A8588] transition-all"
-            >
-              {t('common.appointment')}
-            </Link>
           </div>
         </div>
 

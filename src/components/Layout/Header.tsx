@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from '../../contexts/LanguageContext';
@@ -9,9 +9,28 @@ const Header = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const toggleDropdown = (itemName: string) => {
+    setOpenDropdown(openDropdown === itemName ? null : itemName);
+  };
 
   const menuItems = [
     { name: t('navigation.home'), path: '/' },
@@ -53,12 +72,14 @@ const Header = () => {
               <div 
                 key={item.name} 
                 className="relative flex items-center"
-                onMouseEnter={() => setOpenDropdown(item.name)}
-                onMouseLeave={() => setOpenDropdown(null)}
+                ref={item.submenu ? dropdownRef : null}
               >
                 {item.submenu ? (
                   <>
-                    <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer font-medium py-2 px-3 rounded-lg transition-colors">
+                    <button 
+                      className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 cursor-pointer font-medium py-2 px-3 rounded-lg transition-colors"
+                      onClick={() => toggleDropdown(item.name)}
+                    >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
                     </button>
@@ -117,30 +138,49 @@ const Header = () => {
             <div className="space-y-2">
               {menuItems.map((item) => (
                 <div key={item.name}>
-                  <Link
-                    to={item.path}
-                    className={`block px-3 py-2 rounded-md font-medium transition-colors ${
-                      isActive(item.path)
-                        ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                    } ${item.name === t('navigation.appointment') ? 'bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white' : ''}`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.submenu && (
-                    <div className="ml-4 mt-2 space-y-1">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.path}
-                          className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
+                  {item.submenu ? (
+                    <>
+                      <button
+                        className={`w-full flex items-center justify-between px-3 py-2 rounded-md font-medium transition-colors text-left ${
+                          isActive(item.path)
+                            ? 'text-blue-600 bg-blue-50'
+                            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                        }`}
+                        onClick={() => toggleDropdown(item.name)}
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
+                      </button>
+                      {openDropdown === item.name && (
+                        <div className="ml-4 mt-2 space-y-1">
+                          {item.submenu.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.path}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                              onClick={() => {
+                                setIsMenuOpen(false);
+                                setOpenDropdown(null);
+                              }}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      className={`block px-3 py-2 rounded-md font-medium transition-colors ${
+                        isActive(item.path)
+                          ? 'text-blue-600 bg-blue-50'
+                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      } ${item.name === t('navigation.appointment') ? 'bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white' : ''}`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
                   )}
                 </div>
               ))}

@@ -18,7 +18,9 @@
     "cancel": "Cancel",
     "next": "Next",
     "previous": "Previous",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "callNow": "Call Now",
+    "freeConsultation": "Free Consultation"
   },
   "navigation": {
     "home": "Home",
@@ -55,6 +57,7 @@
       "3": "24/7 customer support"
     },
     "stats": {
+      "title": "Beka Solutions by Numbers",
       "happyClients": "Happy Clients",
       "experience": "Years Experience",
       "support": "Support",
@@ -435,10 +438,19 @@
     "companyInfo": "Professional consulting services to contribute to the growth of your business.",
     "services": "Our Services",
     "contactInfo": "Contact Information",
-    "workingHours": "Working Hours",
+    "workingHours": {
+      "title": "Working Hours",
+      "mondayFriday": "Monday - Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday: Closed"
+    },
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use"
+  },
+  "cta": {
+    "title": "Ready to Grow Your Business?",
+    "description": "Contact our expert team today and discover the most suitable solutions for your business."
   },
   "payment": {
     "creditCard": "Pay with Credit Card",
