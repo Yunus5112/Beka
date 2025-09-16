@@ -1,6 +1,6 @@
 import { Users, Target, Award, Heart } from 'lucide-react';
 import { useTranslation } from '../contexts/LanguageContext';
-import { HeroSection, BenefitsSection, StatsSection, CTASection } from '../components/sections';
+import { HeroSection, BenefitsSection, CTASection } from '../components/sections';
 
 const About = () => {
   const { t } = useTranslation();
@@ -28,12 +28,6 @@ const About = () => {
     }
   ];
 
-  const achievements = [
-    { value: '500+', label: t('about.achievements.successfulProjects'), color: 'blue' as const },
-    { value: '50+', label: t('about.achievements.corporateClients'), color: 'green' as const },
-    { value: '5+', label: t('about.achievements.yearsExperience'), color: 'blue' as const },
-    { value: '24/7', label: t('about.achievements.customerSupport'), color: 'green' as const }
-  ];
 
   const team = t('about.team.members');
 
@@ -49,21 +43,13 @@ const About = () => {
       {/* Who We Are */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">{t('about.whoWeAre.title')}</h2>
-              <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-                <p>{t('about.whoWeAre.paragraph1')}</p>
-                <p>{t('about.whoWeAre.paragraph2')}</p>
-                <p>{t('about.whoWeAre.paragraph3')}</p>
-              </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8">{t('about.whoWeAre.title')}</h2>
+            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <p>{t('about.whoWeAre.paragraph1')}</p>
+              <p>{t('about.whoWeAre.paragraph2')}</p>
+              <p>{t('about.whoWeAre.paragraph3')}</p>
             </div>
-            
-            <StatsSection
-              title={t('about.achievements.title')}
-              stats={achievements}
-              variant="achievements"
-            />
           </div>
         </div>
       </section>
