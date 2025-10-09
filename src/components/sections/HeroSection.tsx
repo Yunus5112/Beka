@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, LucideIcon } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 
 interface HeroSectionProps {
   title: string;
