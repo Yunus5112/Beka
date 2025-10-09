@@ -31,12 +31,12 @@
     "financialServices": "Financial Consulting",
     "accountingServices": "Accounting Services",
     "notaryServices": "Notary & Translation",
-    "insuranceServices": "Insurance Services"
+    "insuranceServices": "Company Formation"
   },
   "hero": {
     "title": "BEKA SOLUTIONS",
     "subtitle": "Boston Consulting Hub",
-    "description": "Comprehensive consulting services for your business success. We are here with our expert team in financial consulting, accounting, notary and insurance services.",
+    "description": "Comprehensive consulting services for your business success. We are here with our expert team in financial consulting, accounting, notary and company formation services.",
     "quickContact": "Quick Contact",
     "freeConsultation": "Free Consultation",
     "phoneLabel": "Phone",
@@ -239,7 +239,7 @@
       }
     },
     "insurance": {
-      "title": "Insurance Services",
+      "title": "Company Formation",
       "description": "Company establishment and Worker Comps & Business Insurance",
       "features": ["Company Formation", "Worker Comps & Business Insurance"],
       "serviceFeatures": [
@@ -250,7 +250,7 @@
       ],
       "detailPage": {
         "hero": {
-          "title": "Insurance Services",
+          "title": "Company Formation",
           "subtitle": "Company Formation & Business Protection",
           "description": "Complete business formation and insurance solutions to protect and grow your company."
         },
@@ -299,16 +299,17 @@
   "about": {
     "title": "About Us",
     "subtitle": "Who we are",
-    "description": "As Beka Solutions, we contribute to the success of businesses in the Boston area by providing comprehensive consulting services.",
+    "description": "At Beka Solution & Boston Consulting Hub, we help entrepreneurs and small businesses turn their dreams into reality. Founded in 2025 by partners who share a common vision of empowering others, our firm provides professional support to individuals striving to succeed in the United States. Our mission is to create opportunities for underrepresented communities — including women, youth, and minority groups — by guiding them through every step of their business journey. We act as a central hub for company formation, licensing, accounting, insurance, translation, notary, and document preparation services, offering complete administrative support for entrepreneurs who want to build and grow their ventures in America. With over 15 years of combined experience, we are dedicated to transforming ambition into achievement.",
     "hero": {
       "title": "About Us",
-      "description": "As Beka Solutions, we contribute to the success of businesses in the Boston area by providing comprehensive consulting services."
+      "description": "At Beka Solution & Boston Consulting Hub, we help entrepreneurs and small businesses turn their dreams into reality. Founded in 2025 by partners who share a common vision of empowering others, our firm provides professional support to individuals striving to succeed in the United States.",
+      "paragraph2": "Our mission is to create opportunities for underrepresented communities — including women, youth, and minority groups — by guiding them through every step of their business journey. We act as a central hub for company formation, licensing, accounting, insurance, translation, notary, and document preparation services, offering complete administrative support for entrepreneurs who want to build and grow their ventures in America.",
+      "paragraph3": "With over 15 years of combined experience, we are dedicated to transforming ambition into achievement."
     },
     "whoWeAre": {
       "title": "Who We Are",
-      "paragraph1": "Beka Solutions Boston Consulting Hub was established in 2019 and provides financial consulting, accounting, notary and insurance services to businesses in Boston and surrounding areas.",
-      "paragraph2": "With our approach that blends Turkish and American business cultures, we offer solutions to our customers from both local and international perspectives.",
-      "paragraph3": "Thanks to our expert staff, we develop customized solutions for your business needs and create strategies for sustainable growth."
+      "paragraph1": "Beka Solution & Boston Consulting Hub is a Boston-based professional service organization that supports entrepreneurs, start-ups, and small businesses across Massachusetts. Our team specializes in business setup, compliance, accounting, insurance, and document assistance, providing clients with the tools and knowledge they need to establish strong, compliant, and sustainable operations.",
+      "paragraph2": "We believe success is built through partnership, trust, and expertise. By combining experience and innovation, we help each client move from vision to execution — and from challenge to success."
     },
     "achievements": {
       "title": "Our Achievements",
@@ -353,8 +354,8 @@
         },
         {
           "name": "Mehmet Yılmaz",
-          "position": "Insurance Specialist",
-          "description": "Insurance and risk management specialist"
+          "position": "Company Formation Specialist",
+          "description": "Company formation and business setup specialist"
         }
       ]
     },
@@ -364,7 +365,12 @@
     },
     "vision": {
       "title": "Our Vision",
-      "description": "To become a leader in the consulting sector in the Boston area and to be the first choice of our customers. To lead the sector with our innovative approaches and make a difference with our continuously improving service quality."
+      "description": "Our vision is to create lasting, positive impacts in the lives of the people and communities we serve. At Beka Solution & Boston Consulting Hub, we aspire to become one of the leading consulting organizations in the United States — recognized for empowering entrepreneurs, guiding small businesses, and helping individuals achieve their dreams. We aim to be the first choice for those who seek growth, opportunity, and trust, and to lead the industry through innovative, compassionate, and continuously improving services. More than just building businesses, we strive to leave beautiful marks in people's lives."
+    },
+    "legalDisclaimer": {
+      "title": "Legal Disclaimer",
+      "paragraph1": "Beka Solution & Boston Consulting Hub is not a law firm and does not provide legal advice or legal representation. Our services — including document preparation, translation, notary, accounting, insurance, and business consulting — are provided for administrative and informational purposes only. Clients are encouraged to consult with a licensed attorney or CPA for any matters requiring legal or tax advice.",
+      "paragraph2": "Beka Solution & Boston Consulting Hub operates in compliance with the laws and regulations of the Commonwealth of Massachusetts and the United States of America."
     }
   },
   "contact": {

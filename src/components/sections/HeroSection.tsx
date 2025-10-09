@@ -6,6 +6,8 @@ interface HeroSectionProps {
   title: string;
   subtitle?: string;
   description: string;
+  paragraph2?: string;
+  paragraph3?: string;
   primaryButton?: {
     text: string;
     href: string;
@@ -29,6 +31,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   title,
   subtitle,
   description,
+  paragraph2,
+  paragraph3,
   primaryButton,
   secondaryButton,
   rightContent,
@@ -80,9 +84,21 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             {(variant === 'contact' || variant === 'about') && (
               <>
                 <h1 className="text-5xl font-bold mb-6">{title}</h1>
-                <p className={`text-xl text-blue-100 leading-relaxed ${!rightContent ? 'max-w-3xl mx-auto' : ''}`}>
-                  {description}
-                </p>
+                <div className="space-y-4">
+                  <p className={`text-xl text-blue-100 leading-relaxed ${!rightContent ? 'max-w-3xl mx-auto' : ''}`}>
+                    {description}
+                  </p>
+                  {paragraph2 && (
+                    <p className={`text-xl text-blue-100 leading-relaxed ${!rightContent ? 'max-w-3xl mx-auto' : ''}`}>
+                      {paragraph2}
+                    </p>
+                  )}
+                  {paragraph3 && (
+                    <p className={`text-xl text-blue-100 leading-relaxed ${!rightContent ? 'max-w-3xl mx-auto' : ''}`}>
+                      {paragraph3}
+                    </p>
+                  )}
+                </div>
               </>
             )}
             

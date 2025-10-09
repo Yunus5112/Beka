@@ -31,12 +31,12 @@
     "financialServices": "Finansal Danışmanlık",
     "accountingServices": "Muhasebe Servisi",
     "notaryServices": "Noterlik ve Tercümanlık",
-    "insuranceServices": "Sigorta Hizmetleri"
+    "insuranceServices": "Şirket Kurulumu"
   },
   "hero": {
     "title": "BEKA SOLUTIONS",
     "subtitle": "Boston Consulting Hub",
-    "description": "İşletmenizin başarısı için kapsamlı danışmanlık hizmetleri. Finansal danışmanlık, muhasebe, noterlik ve sigorta alanlarında uzman ekibimizle yanınızdayız.",
+    "description": "İşletmenizin başarısı için kapsamlı danışmanlık hizmetleri. Finansal danışmanlık, muhasebe, noterlik ve şirket kurulumu alanlarında uzman ekibimizle yanınızdayız.",
     "quickContact": "Hızlı İletişim",
     "freeConsultation": "Ücretsiz Danışmanlık Al",
     "phoneLabel": "Telefon",
@@ -239,7 +239,7 @@
       }
     },
     "insurance": {
-      "title": "Sigorta Hizmetleri",
+      "title": "Şirket Kurulumu",
       "description": "Şirket kurulumu ve Worker Comps & Business Sigortası",
       "features": ["Şirket Kurulumu", "Worker Comps & Business Sigortası"],
       "serviceFeatures": [
@@ -250,7 +250,7 @@
       ],
       "detailPage": {
         "hero": {
-          "title": "Sigorta Hizmetleri",
+          "title": "Şirket Kurulumu",
           "subtitle": "Şirket Kurulumu ve İş Koruması",
           "description": "Şirketinizi korumak ve büyütmek için eksiksiz şirket kurulumu ve sigorta çözümleri."
         },
@@ -299,16 +299,17 @@
   "about": {
     "title": "Hakkımızda",
     "subtitle": "Kim Olduğumuz",
-    "description": "Beka Solutions olarak, Boston bölgesinde işletmelere kapsamlı danışmanlık hizmetleri sunarak onların başarısına katkıda bulunuyoruz.",
+    "description": "Beka Solution & Boston Consulting Hub olarak, girişimcilerin ve küçük işletmelerin hayallerini gerçeğe dönüştürmelerine yardımcı oluyoruz. 2025 yılında başkalarına güç verme ortak vizyonunu paylaşan ortaklar tarafından kurulan firmamız, Amerika Birleşik Devletleri'nde başarılı olmak için çaba gösteren bireylere profesyonel destek sağlamaktadır. Misyonumuz, kadınlar, gençler ve azınlık grupları dahil olmak üzere yeterince temsil edilmeyen topluluklar için fırsatlar yaratmak ve onları iş yolculuklarının her adımında yönlendirmektir. Şirket kurulumu, lisanslama, muhasebe, sigorta, tercüme, noterlik ve belge hazırlama hizmetleri için merkezi bir merkez görevi görüyor ve Amerika'da girişimlerini kurmak ve büyütmek isteyen girişimciler için eksiksiz idari destek sunuyoruz. 15 yılı aşkın birleşik deneyimimizle, hırsı başarıya dönüştürmeye kendimizi adadık.",
     "hero": {
       "title": "Hakkımızda",
-      "description": "Beka Solutions olarak, Boston bölgesinde işletmelere kapsamlı danışmanlık hizmetleri sunarak onların başarısına katkıda bulunuyoruz."
+      "description": "Beka Solution & Boston Consulting Hub olarak, girişimcilerin ve küçük işletmelerin hayallerini gerçeğe dönüştürmelerine yardımcı oluyoruz. 2025 yılında başkalarına güç verme ortak vizyonunu paylaşan ortaklar tarafından kurulan firmamız, Amerika Birleşik Devletleri'nde başarılı olmak için çaba gösteren bireylere profesyonel destek sağlamaktadır.",
+      "paragraph2": "Misyonumuz, kadınlar, gençler ve azınlık grupları dahil olmak üzere yeterince temsil edilmeyen topluluklar için fırsatlar yaratmak ve onları iş yolculuklarının her adımında yönlendirmektir. Şirket kurulumu, lisanslama, muhasebe, sigorta, tercüme, noterlik ve belge hazırlama hizmetleri için merkezi bir merkez görevi görüyor ve Amerika'da girişimlerini kurmak ve büyütmek isteyen girişimciler için eksiksiz idari destek sunuyoruz.",
+      "paragraph3": "15 yılı aşkın birleşik deneyimimizle, hırsı başarıya dönüştürmeye kendimizi adadık."
     },
     "whoWeAre": {
       "title": "Kim Olduğumuz",
-      "paragraph1": "Beka Solutions Boston Consulting Hub, 2019 yılında kurulmuş olup, Boston ve çevresindeki işletmelere finansal danışmanlık, muhasebe, noterlik ve sigorta hizmetleri sunmaktadır.",
-      "paragraph2": "Türk ve Amerikan işletme kültürlerini harmanlayan yaklaşımımızla, müşterilerimize hem yerel hem de uluslararası perspektiften çözümler sunuyoruz.",
-      "paragraph3": "Uzman kadromuz sayesinde, işletmenizin ihtiyaçlarına özel çözümler geliştiriyor ve sürdürülebilir büyüme için stratejiler oluşturuyoruz."
+      "paragraph1": "Beka Solution & Boston Consulting Hub, Massachusetts genelinde girişimcilere, start-up'lara ve küçük işletmelere destek sağlayan Boston merkezli profesyonel bir hizmet kuruluşudur. Ekibimiz, işletme kuruluşu, uyumluluk, muhasebe, sigorta ve belge yardımı konularında uzmanlaşmıştır ve müşterilerimize güçlü, uyumlu ve sürdürülebilir operasyonlar oluşturmaları için ihtiyaç duydukları araçları ve bilgiyi sağlamaktadır.",
+      "paragraph2": "Başarının ortaklık, güven ve uzmanlık ile inşa edildiğine inanıyoruz. Deneyim ve yeniliği birleştirerek, her müşterimizin vizyondan uygulamaya — ve zorluklardan başarıya geçişine yardımcı oluyoruz."
     },
     "achievements": {
       "title": "Başarılarımız",
@@ -353,8 +354,8 @@
         },
         {
           "name": "Mehmet Yılmaz",
-          "position": "Sigorta Uzmanı",
-          "description": "Sigorta ve risk yönetimi uzmanı"
+          "position": "Şirket Kurulumu Uzmanı",
+          "description": "Şirket kurulumu ve işletme kurulum uzmanı"
         }
       ]
     },
@@ -364,7 +365,12 @@
     },
     "vision": {
       "title": "Vizyonumuz",
-      "description": "Boston bölgesinde danışmanlık sektöründe lider konuma gelmek ve müşterilerimizin ilk tercihi olmak. Yenilikçi yaklaşımlarımızla sektöre öncülük etmek ve sürekli gelişen hizmet kalitemizle fark yaratmak."
+      "description": "Vizyonumuz, hizmet verdiğimiz insanların ve toplulukların hayatlarında kalıcı, olumlu etkiler yaratmaktır. Beka Solution & Boston Consulting Hub olarak, Amerika Birleşik Devletleri'nde önde gelen danışmanlık kuruluşlarından biri olmayı ve girişimcilere güç vermek, küçük işletmelere rehberlik etmek ve bireylerin hayallerine ulaşmalarına yardımcı olmakla tanınmayı hedefliyoruz. Büyüme, fırsat ve güven arayan kişilerin ilk tercihi olmayı ve yenilikçi, şefkatli ve sürekli gelişen hizmetlerimizle sektöre öncülük etmeyi amaçlıyoruz. Sadece işletme kurmaktan öte, insanların hayatlarında güzel izler bırakmaya çalışıyoruz."
+    },
+    "legalDisclaimer": {
+      "title": "Yasal Uyarı",
+      "paragraph1": "Beka Solution & Boston Consulting Hub bir hukuk bürosu değildir ve yasal tavsiye veya yasal temsil sağlamaz. Belge hazırlama, tercüme, noterlik, muhasebe, sigorta ve işletme danışmanlığı dahil olmak üzere hizmetlerimiz yalnızca idari ve bilgilendirme amaçlıdır. Müşterilerin, yasal veya vergi tavsiyesi gerektiren konularda lisanslı bir avukat veya mali müşavir ile görüşmeleri önerilir.",
+      "paragraph2": "Beka Solution & Boston Consulting Hub, Massachusetts Eyaleti ve Amerika Birleşik Devletleri'nin yasa ve yönetmeliklerine uygun olarak faaliyet göstermektedir."
     }
   },
   "contact": {

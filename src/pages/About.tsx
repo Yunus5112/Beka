@@ -37,6 +37,8 @@ const About = () => {
       <HeroSection
         title={t('about.hero.title')}
         description={t('about.hero.description')}
+        paragraph2={t('about.hero.paragraph2')}
+        paragraph3={t('about.hero.paragraph3')}
         variant="about"
       />
 
@@ -48,7 +50,6 @@ const About = () => {
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>{t('about.whoWeAre.paragraph1')}</p>
               <p>{t('about.whoWeAre.paragraph2')}</p>
-              <p>{t('about.whoWeAre.paragraph3')}</p>
             </div>
           </div>
         </div>
@@ -114,6 +115,25 @@ const About = () => {
           description: t('about.vision.description')
         }}
       />
+
+      {/* Legal Disclaimer */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+              {t('about.legalDisclaimer.title')}
+            </h2>
+            <div className="bg-white rounded-lg shadow-md p-8 space-y-4">
+              <p className="text-gray-700 leading-relaxed">
+                {t('about.legalDisclaimer.paragraph1')}
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                {t('about.legalDisclaimer.paragraph2')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
