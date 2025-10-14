@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './contexts/LanguageContext';
 import Layout from './components/Layout/Layout';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import Home from './pages/Home';
@@ -46,6 +47,7 @@ const App = () => {
   return (
     <LanguageProvider>
       <Router>
+        <ScrollToTop />
         <Layout>
         <Routes>
           {/* Main Pages */}
