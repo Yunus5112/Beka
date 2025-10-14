@@ -10,19 +10,16 @@ const Contact = () => {
       icon: Phone,
       title: t('common.phone'),
       details: '+1-857-343-3120',
-      description: t('contact.info.phoneDescription')
     },
     {
       icon: Mail,
       title: t('common.email'),
       details: 'bostonconsultinghub@gmail.com',
-      description: t('contact.info.emailDescription')
     },
     {
       icon: MapPin,
       title: t('common.address'),
       details: '420 Lincoln Ave Saugus MA 01906',
-      description: t('contact.info.addressDescription')
     }
   ];
 

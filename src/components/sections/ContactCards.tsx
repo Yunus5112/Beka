@@ -5,7 +5,6 @@ interface ContactInfo {
   icon: LucideIcon;
   title: string;
   details: string;
-  description: string;
 }
 
 interface ContactCardsProps {
@@ -32,11 +31,8 @@ const ContactCards: React.FC<ContactCardsProps> = ({
             <h3 className="text-xl font-bold text-gray-900 mb-2">
               {contact.title}
             </h3>
-            <p className="text-blue-600 font-semibold mb-2">
+            <p className="text-blue-600 font-semibold">
               {contact.details}
-            </p>
-            <p className="text-gray-600 text-sm">
-              {contact.description}
             </p>
           </div>
         );
