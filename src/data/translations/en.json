@@ -86,7 +86,7 @@
         "services": [
           {
             "title": "SBA LOANS",
-            "description": "Grow your business with Small Business Administration loans",
+            "description": "We assist businesses in SBA Lender Match process",
             "features": [
               "Low interest rates",
               "Long-term options",
@@ -419,16 +419,17 @@
       "fullName": "Full Name",
       "email": "Email Address",
       "phone": "Phone Number",
-      "message": "Message (Optional)",
+      "message": "Your Message (optional)",
       "selectDate": "Select Date",
       "selectTime": "Select Time",
       "continue": "Continue",
       "complete": "Complete Appointment",
       "confirmAppointment": "Confirm Appointment",
+      "sending": "Sending...",
       "placeholders": {
-        "fullName": "Enter your full name",
-        "email": "Enter your email address",
-        "phone": "Enter your phone number",
+        "fullName": "Your Full Name",
+        "email": "Your Email Address",
+        "phone": "Your Phone Number",
         "message": "Details about your appointment..."
       }
     },

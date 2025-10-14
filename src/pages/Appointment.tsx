@@ -3,12 +3,16 @@ import DatePicker from 'react-datepicker';
 import { Calendar, Clock, User, Phone, Mail, MessageSquare, CheckCircle } from 'lucide-react';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useTranslation } from '../contexts/LanguageContext';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG, AppointmentEmailParams } from '../config/emailjs.config';
 
 const Appointment = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState('');
   const [step, setStep] = useState(1);
+  const [loading, setLoading] = useState(false);
+  const [emailError, setEmailError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     service: '',
     name: '',
@@ -51,16 +55,52 @@ const Appointment = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would integrate with your booking system
-    console.log('Appointment booked:', {
-      date: selectedDate,
-      time: selectedTime,
-      ...formData
-    });
-    alert('Randevunuz başarıyla oluşturuldu! Onay e-postası gönderilecek.');
-    setStep(4); // Success step
+    setLoading(true);
+    setEmailError(null);
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+
+      // Get the selected service name
+      const selectedService = services.find(s => s.id === formData.service)?.name || formData.service;
+
+      // Prepare email parameters
+      const emailParams: AppointmentEmailParams = {
+        to_email: 'bostonconsultinghub@gmail.com',
+        from_name: formData.name,
+        from_email: formData.email,
+        from_phone: formData.phone,
+        service: selectedService,
+        date: selectedDate?.toLocaleDateString(language === 'tr' ? 'tr-TR' : 'en-US') || '',
+        time: selectedTime,
+        message: formData.message || 'No additional message'
+      };
+
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        emailParams
+      );
+
+      console.log('Email sent successfully:', response);
+      setStep(4); // Success step
+    } catch (error: any) {
+      console.error('Email sending failed:', error);
+      setEmailError(error.text || 'Failed to send email. Please try again.');
+      
+      // Show error message but still allow to see summary (optional)
+      alert(
+        language === 'tr' 
+          ? 'Email gönderilirken bir hata oluştu. Lütfen bizimle doğrudan iletişime geçin.' 
+          : 'An error occurred while sending email. Please contact us directly.'
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   const isWeekday = (date: Date) => {
@@ -286,10 +326,10 @@ const Appointment = () => {
                   </button>
                   <button
                     onClick={handleSubmit}
-                    disabled={!formData.name || !formData.email || !formData.phone}
+                    disabled={!formData.name || !formData.email || !formData.phone || loading}
                     className="bg-gradient-to-r from-[#1E272D] to-[#6B7473] text-white px-8 py-3 rounded-lg font-semibold hover:from-[#2A363E] hover:to-[#7A8588] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {t('appointment.form.confirmAppointment')}
+                    {loading ? t('appointment.form.sending') : t('appointment.form.confirmAppointment')}
                   </button>
                 </div>
               </div>
@@ -318,7 +358,7 @@ const Appointment = () => {
                     <div>
                       <span>{t('appointment.summary.date')}: </span>
                       <span className="font-medium">
-                        {selectedDate?.toLocaleDateString('tr-TR')}
+                        {selectedDate?.toLocaleDateString(language === 'tr' ? 'tr-TR' : 'en-US')}
                       </span>
                     </div>
                     <div>

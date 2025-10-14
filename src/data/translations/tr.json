@@ -86,7 +86,7 @@
         "services": [
           {
             "title": "SBA LOANS",
-            "description": "Small Business Administration kredileri ile işletmenizi büyütün",
+            "description": "İşletmelere SBA Lender Match sürecinde yardımcı oluyoruz",
             "features": [
               "Düşük faiz oranları",
               "Uzun vade seçenekleri",
@@ -419,15 +419,16 @@
       "fullName": "Ad Soyad",
       "email": "E-posta Adresi",
       "phone": "Telefon Numarası",
-      "message": "Mesaj (Opsiyonel)",
+      "message": "Mesajınız (opsiyonel)",
       "selectDate": "Tarih Seçin",
       "selectTime": "Saat Seçin",
       "continue": "Devam Et",
       "complete": "Randevuyu Tamamla",
       "confirmAppointment": "Randevuyu Onayla",
+      "sending": "Gönderiliyor...",
       "placeholders": {
-        "fullName": "Adınızı ve soyadınızı girin",
-        "email": "E-posta adresinizi girin",
+        "fullName": "Adınız Soyadınız",
+        "email": "E-posta Adresiniz",
         "phone": "Telefon numaranızı girin",
         "message": "Randevunuz hakkında detaylar..."
       }
