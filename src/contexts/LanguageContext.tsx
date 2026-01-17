@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
 import enTranslations from '../data/translations/en.json';
 import trTranslations from '../data/translations/tr.json';
 
@@ -107,6 +108,6 @@ export const useLanguage = (): LanguageContextType => {
 
 // Utility hook for easy translation access
 export const useTranslation = () => {
-  const { t } = useLanguage();
-  return { t };
+  const { t, language } = useLanguage();
+  return { t, language };
 };

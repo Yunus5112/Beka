@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
-import { Calendar, Clock, User, Phone, Mail, MessageSquare, CheckCircle } from 'lucide-react';
+import { Calendar, User, MessageSquare, CheckCircle } from 'lucide-react';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useTranslation } from '../contexts/LanguageContext';
 import emailjs from '@emailjs/browser';
-import { EMAILJS_CONFIG, AppointmentEmailParams } from '../config/emailjs.config';
+import { EMAILJS_CONFIG } from '../config/emailjs.config';
+import type { AppointmentEmailParams } from '../config/emailjs.config';
 
 const Appointment = () => {
   const { t, language } = useTranslation();
@@ -12,7 +13,6 @@ const Appointment = () => {
   const [selectedTime, setSelectedTime] = useState('');
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
-  const [emailError, setEmailError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     service: '',
     name: '',
@@ -58,7 +58,6 @@ const Appointment = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setEmailError(null);
 
     try {
       // Initialize EmailJS with your public key
@@ -83,14 +82,13 @@ const Appointment = () => {
       const response = await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
         EMAILJS_CONFIG.TEMPLATE_ID,
-        emailParams
+        emailParams as unknown as Record<string, string>
       );
 
       console.log('Email sent successfully:', response);
       setStep(4); // Success step
     } catch (error: any) {
       console.error('Email sending failed:', error);
-      setEmailError(error.text || 'Failed to send email. Please try again.');
       
       // Show error message but still allow to see summary (optional)
       alert(

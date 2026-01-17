@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, LucideIcon } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 interface CTASectionProps {
   title: string;

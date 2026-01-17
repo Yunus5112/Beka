@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { LucideIcon, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 interface ServiceItem {
   title: string;
@@ -22,7 +23,6 @@ interface ServiceCardsProps {
 const ServiceCards: React.FC<ServiceCardsProps> = ({
   title,
   services,
-  variant = 'home',
   columns = 2,
   className = ''
 }) => {

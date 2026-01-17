@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Globe, ChevronDown } from 'lucide-react';
-import { useLanguage, Language } from '../../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
+import type { Language } from '../../contexts/LanguageContext';
 
 interface LanguageOption {
   code: Language;

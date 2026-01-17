@@ -1,4 +1,4 @@
-import { FileText, Globe, Users, TrendingUp, CheckCircle, Shield } from 'lucide-react';
+import { FileText, Globe, TrendingUp, CheckCircle, Shield } from 'lucide-react';
 import { useTranslation } from '../../contexts/LanguageContext';
 import { HeroSection, ServiceCards, BenefitsSection, ProcessSteps, CTASection } from '../../components/sections';
 
