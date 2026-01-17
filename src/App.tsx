@@ -46,7 +46,7 @@ const Terms = () => (
 const App = () => {
   return (
     <LanguageProvider>
-      <Router>
+      <Router basename="/Beka">
         <ScrollToTop />
         <Layout>
         <Routes>
