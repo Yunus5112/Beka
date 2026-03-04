@@ -48,11 +48,8 @@ const ServiceCards: React.FC<ServiceCardsProps> = ({
         <div className={`grid ${getGridCols()} gap-8`}>
           {services.map((service, index) => {
             const Icon = service.icon;
-            return (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100"
-              >
+            const CardContent = (
+              <>
                 {/* Service Header */}
                 <div className="flex items-center space-x-4 mb-6">
                   {Icon && (
@@ -85,17 +82,31 @@ const ServiceCards: React.FC<ServiceCardsProps> = ({
                 {/* Action Button */}
                 {service.link && service.buttonText && (
                   <div className="mt-6">
-                    <Link
-                      to={service.link}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
-                    >
+                    <span className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold">
                       {service.buttonText}
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                    </Link>
+                    </span>
                   </div>
                 )}
+              </>
+            );
+
+            return service.link ? (
+              <Link
+                key={index}
+                to={service.link}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl active:scale-[0.98] transition-all p-8 border border-gray-100 block cursor-pointer"
+              >
+                {CardContent}
+              </Link>
+            ) : (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100"
+              >
+                {CardContent}
               </div>
             );
           })}
