@@ -61,8 +61,7 @@ const Header = () => {
               className="w-12 h-12 object-contain rounded-lg"
             />
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-gray-800">BEKA SOLUTIONS</h1>
-              <p className="text-sm text-gray-600">Boston Consulting Hub</p>
+              <h1 className="text-xl font-bold text-gray-800">Boston Consulting Hub</h1>
             </div>
           </Link>
 

@@ -69,11 +69,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   <h1 className="text-6xl lg:text-7xl font-bold leading-tight mb-6">
                     {title}
                   </h1>
-                  {subtitle && (
-                    <h2 className="text-3xl lg:text-4xl font-semibold text-blue-100 mb-6">
-                      {subtitle}
-                    </h2>
-                  )}
                   <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
                     {description}
                   </p>

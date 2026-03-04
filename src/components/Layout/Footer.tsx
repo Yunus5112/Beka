@@ -20,8 +20,7 @@ const Footer = () => {
                 className="w-10 h-10 object-contain rounded-lg"
               />
               <div>
-                <h3 className="text-xl font-bold">BEKA SOLUTIONS</h3>
-                <p className="text-gray-300 text-sm">Boston Consulting Hub</p>
+                <h3 className="text-xl font-bold">Boston Consulting Hub</h3>
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed">
