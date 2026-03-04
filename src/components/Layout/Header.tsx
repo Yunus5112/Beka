@@ -133,33 +133,47 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
+          <div className="lg:hidden border-t border-gray-200 py-4 relative z-50">
             <div className="space-y-2">
               {menuItems.map((item) => (
-                <div key={item.name}>
+                <div key={item.name} className="relative">
                   {item.submenu ? (
                     <>
                       <button
-                        className={`w-full flex items-center justify-between px-3 py-2 rounded-md font-medium transition-colors text-left ${
+                        type="button"
+                        className={`w-full flex items-center justify-between px-3 py-2 rounded-md font-medium transition-colors text-left touch-manipulation ${
                           isActive(item.path)
                             ? 'text-blue-600 bg-blue-50'
                             : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                         }`}
-                        onClick={() => toggleDropdown(item.name)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleDropdown(item.name);
+                        }}
+                        onTouchStart={(e) => {
+                          e.stopPropagation();
+                        }}
                       >
                         <span>{item.name}</span>
                         <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
                       </button>
                       {openDropdown === item.name && (
-                        <div className="ml-4 mt-2 space-y-1">
+                        <div className="ml-4 mt-2 space-y-1 relative z-50" onClick={(e) => e.stopPropagation()}>
                           {item.submenu.map((subItem) => (
                             <Link
                               key={subItem.name}
                               to={subItem.path}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md"
-                              onClick={() => {
+                              className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 active:bg-blue-100 rounded-md touch-manipulation cursor-pointer relative z-50"
+                              onClick={(e) => {
+                                e.stopPropagation();
                                 setIsMenuOpen(false);
                                 setOpenDropdown(null);
+                              }}
+                              onTouchEnd={(e) => {
+                                e.stopPropagation();
+                              }}
+                              onMouseDown={(e) => {
+                                e.stopPropagation();
                               }}
                             >
                               {subItem.name}
@@ -171,7 +185,7 @@ const Header = () => {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`block px-3 py-2 rounded-md font-medium transition-colors ${
+                      className={`block px-3 py-2 rounded-md font-medium transition-colors touch-manipulation ${
                         isActive(item.path)
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
