@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useTranslation } from '../../contexts/LanguageContext';
-import BekaLogo from '../../assets/BekaLogo.jpeg';
+//import BekaLogo from '../../assets/BekaLogo.jpeg';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -14,11 +14,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img 
+              {/* <img 
                 src={BekaLogo} 
                 alt="Beka Solutions Logo" 
                 className="w-10 h-10 object-contain rounded-lg"
-              />
+              /> */}
               <div>
                 <h3 className="text-xl font-bold">Boston Consulting Hub</h3>
               </div>

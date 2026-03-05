@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from '../../contexts/LanguageContext';
 import LanguageSwitcher from '../UI/LanguageSwitcher';
-import BekaLogo from '../../assets/BekaLogo.jpeg';
+//import BekaLogo from '../../assets/BekaLogo.jpeg';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -55,11 +55,11 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img 
+           {/* <img 
               src={BekaLogo} 
               alt="Beka Solutions Logo" 
               className="w-12 h-12 object-contain rounded-lg"
-            />
+            />*/}
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-gray-800">Boston Consulting Hub</h1>
             </div>
