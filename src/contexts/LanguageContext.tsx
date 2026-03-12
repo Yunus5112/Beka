@@ -26,14 +26,14 @@ const translations = {
 };
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
-  // Get language from localStorage or default to Turkish
+  // Get language from localStorage or default to English
   const [language, setLanguageState] = useState<Language>(() => {
     try {
       const saved = typeof window !== 'undefined' ? localStorage.getItem('language') : null;
-      return (saved as Language) || 'tr';
+      return (saved as Language) || 'en';
     } catch (error) {
       console.warn('Error accessing localStorage:', error);
-      return 'tr';
+      return 'en';
     }
   });
 
