@@ -9,13 +9,14 @@
 
 export const EMAILJS_CONFIG = {
   // Your EmailJS Public Key (from Account > API Keys)
-  PUBLIC_KEY: 'YOUR_PUBLIC_KEY_HERE',
+  PUBLIC_KEY: 'R6Zc1r6LZYdfx83w2',
   
   // Your EmailJS Service ID (from Email Services)
-  SERVICE_ID: 'YOUR_SERVICE_ID_HERE',
+  SERVICE_ID: 'service_u9u96aa',
   
   // Your EmailJS Template ID (from Email Templates)
-  TEMPLATE_ID: 'YOUR_TEMPLATE_ID_HERE',
+  ADMIN_TEMPLATE_ID: 'template_3pe5alr',      // admin için
+  CUSTOMER_TEMPLATE_ID: 'template_iynlg0p',   // müşteri için
 };
 
 // Email template parameters interface

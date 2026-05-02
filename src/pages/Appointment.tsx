@@ -78,14 +78,26 @@ const Appointment = () => {
         message: formData.message || 'No additional message'
       };
 
-      // Send email using EmailJS
-      const response = await emailjs.send(
+      // Admin maili gönder
+      await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
-        EMAILJS_CONFIG.TEMPLATE_ID,
-        emailParams as unknown as Record<string, string>
+        EMAILJS_CONFIG.ADMIN_TEMPLATE_ID,
+        {
+          ...emailParams,
+          to_email: 'bostonconsultinghub@gmail.com',
+        } as unknown as Record<string, string>
       );
 
-      console.log('Email sent successfully:', response);
+      // Müşteriye otomatik yanıt gönder
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.CUSTOMER_TEMPLATE_ID,
+        {
+          ...emailParams,
+          to_email: formData.email,
+        } as unknown as Record<string, string>
+      );
+
       setStep(4); // Success step
     } catch (error: any) {
       console.error('Email sending failed:', error);
